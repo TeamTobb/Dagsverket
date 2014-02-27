@@ -12,16 +12,20 @@ package Backend;
  */
 
 public class Operator {
-    private String navn;
+    private String name;
 
-    public Operator(String navn) {
-            this.navn = navn;
+    public Operator(String name) {
+            this.navn = name;
     }
 
-    public boolean createEvent(String contractor, String[] employees, ) {
+    public String getName() {
+    	return this.name;
+    }
+
+    public boolean createEvent(String contractor, String[] employees) {
     	// Check and verify every parameter
     	if(contractor != null) {
-
+    		return true;
     	}
 
     	// updateDatabase();
