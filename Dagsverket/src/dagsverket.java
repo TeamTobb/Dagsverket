@@ -77,7 +77,7 @@ public class dagsverket extends javax.swing.JFrame {
                 .addContainerGap(226, Short.MAX_VALUE))
         );
 
-        jTabbedPane3.addTab("uferdige", jPanel2);
+        jTabbedPane3.addTab("Uferdige", jPanel2);
 
         jLabel3.setText("Akriv tab");
 
@@ -98,7 +98,7 @@ public class dagsverket extends javax.swing.JFrame {
                 .addContainerGap(226, Short.MAX_VALUE))
         );
 
-        jTabbedPane3.addTab("aktiv", jPanel3);
+        jTabbedPane3.addTab("Aktiv", jPanel3);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -111,7 +111,7 @@ public class dagsverket extends javax.swing.JFrame {
             .addGap(0, 248, Short.MAX_VALUE)
         );
 
-        jTabbedPane3.addTab("tab4", jPanel4);
+        jTabbedPane3.addTab("Ferdig", jPanel4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

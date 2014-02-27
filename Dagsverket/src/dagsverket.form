@@ -84,8 +84,8 @@
         <Container class="javax.swing.JPanel" name="jPanel2">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="uferdige">
-                <Property name="tabTitle" type="java.lang.String" value="uferdige"/>
+              <JTabbedPaneConstraints tabName="Uferdige">
+                <Property name="tabTitle" type="java.lang.String" value="Uferdige"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -121,8 +121,8 @@
         <Container class="javax.swing.JPanel" name="jPanel3">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="aktiv">
-                <Property name="tabTitle" type="java.lang.String" value="aktiv"/>
+              <JTabbedPaneConstraints tabName="Aktiv">
+                <Property name="tabTitle" type="java.lang.String" value="Aktiv"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -158,8 +158,8 @@
         <Container class="javax.swing.JPanel" name="jPanel4">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="tab4">
-                <Property name="tabTitle" type="java.lang.String" value="tab4"/>
+              <JTabbedPaneConstraints tabName="Ferdig">
+                <Property name="tabTitle" type="java.lang.String" value="Ferdig"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
