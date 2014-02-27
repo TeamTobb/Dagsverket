@@ -151,13 +151,10 @@ public class dagsverket extends javax.swing.JFrame {
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
         int reply = showConfirmDialog(null, "Er du sikker på at du vil logge ut?", "confirm", YES_NO_OPTION);
-                if (reply == YES_OPTION)
-                {
-                          this.dispose();
-                    Login.main(null);
-                    
-                }
-  
+                if (reply == YES_OPTION){
+                    this.dispose();
+                    Login.main(null);                   
+                } 
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     /**
