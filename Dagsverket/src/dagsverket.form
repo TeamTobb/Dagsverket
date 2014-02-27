@@ -25,7 +25,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTabbedPane3" pref="388" max="32767" attributes="0"/>
+              <Component id="jTabbedPane3" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -76,7 +76,7 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
-                <Property name="text" type="java.lang.String" value="VElkommen til tab 1"/>
+                <Property name="text" type="java.lang.String" value="Velkommen til tab 1"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -94,9 +94,8 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="213" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="237" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -113,7 +112,7 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="VElkommen til Tab 2"/>
+                <Property name="text" type="java.lang.String" value="Velkommen til Tab 2"/>
               </Properties>
             </Component>
           </SubComponents>

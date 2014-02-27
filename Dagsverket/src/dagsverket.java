@@ -34,7 +34,7 @@ public class dagsverket extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setText("VElkommen til tab 1");
+        jLabel2.setText("Velkommen til tab 1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -55,16 +55,15 @@ public class dagsverket extends javax.swing.JFrame {
 
         jTabbedPane3.addTab("tab1", jPanel1);
 
-        jLabel1.setText("VElkommen til Tab 2");
+        jLabel1.setText("Velkommen til Tab 2");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
                 .addComponent(jLabel1)
-                .addContainerGap(213, Short.MAX_VALUE))
+                .addGap(0, 237, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -82,7 +81,7 @@ public class dagsverket extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                .addComponent(jTabbedPane3)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
