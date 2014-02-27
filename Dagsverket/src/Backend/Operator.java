@@ -15,7 +15,7 @@ public class Operator {
     private String name;
 
     public Operator(String name) {
-            this.navn = name;
+            this.name = name;
     }
 
     public String getName() {
