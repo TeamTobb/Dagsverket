@@ -42,6 +42,11 @@ public class User {
         }
         nyTabell[nyTabell.length-1] = nyBruker;
         this.usernames = nyTabell;
+
+        // ADD TO DATEBAES
+
+        // updateUsernames();
+
         return true;
     }
 }
