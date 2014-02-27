@@ -35,7 +35,13 @@ public class User {
     	return this.usernames;
     }
 
-    public boolean createUser() {
-    	return false;
+    public boolean createUser(String nyBruker) {
+    	String[] nyTabell = new String[this.usernames.length+1];
+        for(int i = 0; i<this.usernames.length; i++){
+            nyTabell[i] = usernames[i];
+        }
+        nyTabell[nyTabell.length-1] = nyBruker;
+        this.usernames = nyTabell;
+        return true;
     }
 }

@@ -105,20 +105,15 @@ public class Login extends javax.swing.JFrame {
         selected = jList2.getSelectedValue().toString();
         String[] navn = {selected};
         
-        this.dispose();
-        
         dagsverket.main(navn);
-        
-        
-        
-        
-        
-        
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        String nyBruker = javax.swing.JOptionPane.showInputDialog("Skriv inn navn på ny bruker");
+        users.createUser(nyBruker);
+        jList2.setListData(users.getUsernames());
+        jList2.updateUI();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
