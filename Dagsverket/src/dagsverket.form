@@ -25,9 +25,15 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jTabbedPane3" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
+=======
+              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+              <Component id="jTabbedPane3" min="-2" pref="625" max="-2" attributes="0"/>
+              <EmptySpace pref="55" max="32767" attributes="0"/>
+>>>>>>> FETCH_HEAD
 =======
               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
               <Component id="jTabbedPane3" min="-2" pref="625" max="-2" attributes="0"/>
@@ -65,9 +71,15 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="231" max="32767" attributes="0"/>
+=======
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="450" max="32767" attributes="0"/>
+>>>>>>> FETCH_HEAD
 =======
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -90,7 +102,11 @@
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Property name="text" type="java.lang.String" value="Velkommen til Tab 1"/>
+=======
+                <Property name="text" type="java.lang.String" value="VElkommen til Tab 2"/>
+>>>>>>> FETCH_HEAD
 =======
                 <Property name="text" type="java.lang.String" value="VElkommen til Tab 2"/>
 >>>>>>> FETCH_HEAD
@@ -157,8 +173,13 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="231" max="32767" attributes="0"/>
+=======
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="465" max="32767" attributes="0"/>
+>>>>>>> FETCH_HEAD
 =======
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="465" max="32767" attributes="0"/>
@@ -180,7 +201,11 @@
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Property name="text" type="java.lang.String" value="Velkommen til Tab 2"/>
+=======
+                <Property name="text" type="java.lang.String" value="Opprett nytt oppdrag"/>
+>>>>>>> FETCH_HEAD
 =======
                 <Property name="text" type="java.lang.String" value="Opprett nytt oppdrag"/>
 >>>>>>> FETCH_HEAD
