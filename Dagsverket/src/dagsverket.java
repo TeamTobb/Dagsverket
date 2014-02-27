@@ -8,6 +8,8 @@
  *
  * @author Jorgen
  */
+
+import static javax.swing.JOptionPane.*;
 public class dagsverket extends javax.swing.JFrame {
 
     /**
@@ -148,8 +150,14 @@ public class dagsverket extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        this.dispose();
-        Login.main(null);
+        int reply = showConfirmDialog(null, "Er du sikker på at du vil logge ut?", "confirm", YES_NO_OPTION);
+                if (reply == YES_OPTION)
+                {
+                          this.dispose();
+                    Login.main(null);
+                    
+                }
+  
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     /**

@@ -94,6 +94,7 @@ public class Login extends javax.swing.JFrame {
         
         // TODO Bytt ut null med lastet brukernavn  
         // TODO Add try catch
+        showConfirm
         this.dispose();
         dagsverket.main(null);
         
