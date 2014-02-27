@@ -45,7 +45,11 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(148, 148, 148)
                 .addComponent(jButton1)
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .addContainerGap(177, Short.MAX_VALUE))
+=======
+                .addContainerGap(144, Short.MAX_VALUE))
+>>>>>>> FETCH_HEAD
 =======
                 .addContainerGap(144, Short.MAX_VALUE))
 >>>>>>> FETCH_HEAD
