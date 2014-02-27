@@ -10,11 +10,14 @@
  */
 
 import static javax.swing.JOptionPane.*;
+
+import Backend.*;
+
 public class dagsverket extends javax.swing.JFrame {
-    private String brukernavn = "";
-    /**
-     * Creates new form dagsverket
-     */
+    
+    public static Operator op;
+    
+  
     public dagsverket() {
         initComponents();
     }
@@ -125,7 +128,7 @@ public class dagsverket extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Bruker: "+brukernavn);
+        jLabel4.setText("Bruker: "+op.getName());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -196,7 +199,7 @@ public class dagsverket extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(dagsverket.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        
+        op = new Operator(args[0]);
         
         //Skriv ut brukernavn
         //System.out.print(args[0]);

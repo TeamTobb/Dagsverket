@@ -212,7 +212,7 @@
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="&quot;Bruker: &quot;+brukernavn" type="code"/>
+          <Connection code="&quot;Bruker: &quot;+op.getName()" type="code"/>
         </Property>
       </Properties>
     </Component>
