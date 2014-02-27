@@ -25,7 +25,7 @@ public class User {
         this.usernames = updateUsernames();
     }
 
-    private ArrayList<String> updateUsernames() {
+    private String[] updateUsernames() {
     	// ArrayList<String> temp = new ArrayList<String>();
     	String[] temp = {"Borgar", "Bjørn", "Thomas", "Jørgen"};
     	return temp;
