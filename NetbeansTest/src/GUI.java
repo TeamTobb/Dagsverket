@@ -30,7 +30,7 @@ public class GUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Hoxmarks hi");
+        jButton1.setText("hi");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -42,24 +42,16 @@ public class GUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(148, 148, 148)
+                .addGap(131, 131, 131)
                 .addComponent(jButton1)
-<<<<<<< HEAD
-<<<<<<< HEAD
-                .addContainerGap(177, Short.MAX_VALUE))
-=======
-                .addContainerGap(144, Short.MAX_VALUE))
->>>>>>> FETCH_HEAD
-=======
-                .addContainerGap(144, Short.MAX_VALUE))
->>>>>>> FETCH_HEAD
+                .addContainerGap(194, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(127, 127, 127)
+                .addGap(115, 115, 115)
                 .addComponent(jButton1)
-                .addContainerGap(144, Short.MAX_VALUE))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
 
         pack();
