@@ -63,6 +63,7 @@ public class Login extends javax.swing.JFrame {
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
+        jList2.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane2.setViewportView(jList2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -100,8 +101,18 @@ public class Login extends javax.swing.JFrame {
         
         // TODO Bytt ut null med lastet brukernavn  
         // TODO Add try catch
+        String selected = "";
+        selected = jList2.getSelectedValue().toString();
+        String[] navn = {selected};
+        
         this.dispose();
-        dagsverket.main(null);
+        
+        dagsverket.main(navn);
+        
+        
+        
+        
+        
         
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
