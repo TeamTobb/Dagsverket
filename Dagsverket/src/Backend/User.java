@@ -19,14 +19,23 @@ package Backend;
 import java.util.*;
 
 public class User {
-    private ArrayList<String> usernames;
+    private String[] usernames;
 
     public User() {
-        this.usernames = getUsernames();
+        this.usernames = updateUsernames();
     }
 
-    private ArrayList<String> getUsernames() {
-    	ArrayList<String> temp = new ArrayList<String>();
+    private ArrayList<String> updateUsernames() {
+    	// ArrayList<String> temp = new ArrayList<String>();
+    	String[] temp = {"Borgar", "Bjørn", "Thomas", "Jørgen"};
     	return temp;
+    }
+
+    public String[] getUsernames() {
+    	return this.usernames;
+    }
+
+    public boolean createUser() {
+    	return false;
     }
 }
