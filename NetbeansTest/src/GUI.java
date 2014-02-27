@@ -41,17 +41,14 @@ public class GUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(252, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29))
-=======
             .addGroup(layout.createSequentialGroup()
-                .addGap(131, 131, 131)
+                .addGap(148, 148, 148)
                 .addComponent(jButton1)
                 .addContainerGap(144, Short.MAX_VALUE))
->>>>>>> 4b6ead40ccdfce7f518f7f2179f41b165a911c13
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -59,6 +56,16 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap(196, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
+                .addContainerGap(177, Short.MAX_VALUE))
+                .addContainerGap(144, Short.MAX_VALUE))
+                .addContainerGap(144, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(127, 127, 127)
+                .addComponent(jButton1)
+                .addContainerGap(144, Short.MAX_VALUE))
         );
 
         pack();
