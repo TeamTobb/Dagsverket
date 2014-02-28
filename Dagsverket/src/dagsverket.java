@@ -507,7 +507,31 @@ public class dagsverket extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField5ActionPerformed
 
     private void FerdigButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FerdigButtonActionPerformed
-        // TODO add your handling code here:
+        String contractor = jTextField1.getText();
+        try{
+            int telephone = Integer.parseInt(jTextField2.getText());
+        } catch(NumberFormatException e){
+            System.out.println("Feil telefonnumer. Bare tall");
+        }          
+        String gateAdresse = jTextField6.getText();       
+        try{
+            int postnummer = Integer.parseInt(jTextField7.getText());
+        }
+        catch(NumberFormatException e){
+            System.out.println("Feil postnummer. Bare tall");
+        }
+        String poststed = jTextField3.getText();
+        String epostAdresse = jTextField9.getText();   
+        String topic = jTextField5.getText();     
+        String description = jTextArea1.getText();
+        Object ansvarlige = jComboBox1.getSelectedItem();
+        String befaring = jTextField4.getText(); 
+        
+        String[] arbeidstakere = new String[jList1.getModel().getSize()];     
+        for(int i = 0; i<arbeidstakere.length; i++){
+            arbeidstakere[i] = (String) jList1.getModel().getElementAt(i);        
+        }    
+        Object status = jComboBox2.getSelectedItem();         
     }//GEN-LAST:event_FerdigButtonActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
