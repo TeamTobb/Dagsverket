@@ -28,7 +28,7 @@ public class Operator {
 
     public Operator(String name) {
             this.name = name;
-            this.conn = connect();
+            //this.conn = connect();
     }
 
     private Connection connect() {
@@ -58,6 +58,21 @@ public class Operator {
 
     public String getName() {
     	return this.name;
+    }
+    //OVERLOADING AV KONSTRUKTØR FOR Å FÅ DET TIL Å FUNKE ATM 
+    public ArrayList<Integer> createEvent(String contractor, String[] employees, int phone, String mail, String address, int postnr, String postplace, String responsible, String checkup_date, String subject, String description, String status){
+        ArrayList<Integer> errors = new ArrayList<Integer>();
+        // important: contractor, phone / mail, subject
+    	if(contractor == null || contractor.trim().equals("")) {
+    		errors.add(NO_CONTRACTOR);
+    	}
+        if(mail == null || mail.trim().equals("") && phone <= 0) {
+            errors.add(NO_CONTACT_INFO);
+        }
+        if(subject == null || subject.trim().equals("")) {
+            errors.add(NO_SUBJECT);
+        }
+        return errors;
     }
 
     // ADD a DATE, JAVA DATE -- how to add to SQL?
