@@ -545,25 +545,25 @@ public class dagsverket extends javax.swing.JFrame {
         int postnummer = 0;
         int telephone = 0;
         try{
-            telephone = Integer.parseInt(jTextField2.getText());
+            telephone = Integer.parseInt(jTextField2.getText().trim());
         } catch(NumberFormatException e){
             System.out.println("Feil telefonnumer. Bare tall");
         }          
-        String gateAdresse = jTextField6.getText();       
+        String gateAdresse = jTextField6.getText().trim();       
         try{
-            postnummer = Integer.parseInt(jTextField7.getText());
+            postnummer = Integer.parseInt(jTextField7.getText().trim());
         }
         catch(NumberFormatException e){
             System.out.println("Feil postnummer. Bare tall");
         }
-        String poststed = jTextField3.getText();
-        String epostAdresse = jTextField9.getText();   
-        String topic = jTextField5.getText();     
-        String description = jTextArea1.getText();
+        String poststed = jTextField3.getText().trim();
+        String epostAdresse = jTextField9.getText().trim();   
+        String topic = jTextField5.getText().trim();     
+        String description = jTextArea1.getText().trim();
         
         String ansvarlige = (String)jComboBox1.getSelectedItem();
         
-        String befaring = jTextField4.getText(); 
+        String befaring = jTextField4.getText().trim(); 
         
         String[] arbeidstakere = new String[jList1.getModel().getSize()];     
         for(int i = 0; i<arbeidstakere.length; i++){
