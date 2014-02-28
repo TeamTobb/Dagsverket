@@ -95,7 +95,6 @@ public class dagsverket extends javax.swing.JFrame {
 
         jLabel5.setText("Oppdragsgiver:");
 
-        jTextField1.setText("              ");
         jTextField1.setToolTipText("");
         jTextField1.setVerifyInputWhenFocusTarget(false);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -106,7 +105,6 @@ public class dagsverket extends javax.swing.JFrame {
 
         jLabel6.setText("Telefon:");
 
-        jTextField2.setText(" ");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -195,7 +193,6 @@ public class dagsverket extends javax.swing.JFrame {
         jTextField8.setEditable(false);
         jTextField8.setText("00001");
 
-        jTextField9.setText(" ");
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField9ActionPerformed(evt);
