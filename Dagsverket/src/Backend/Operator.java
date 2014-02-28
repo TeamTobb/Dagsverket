@@ -32,6 +32,8 @@ public class Operator {
     	return this.name;
     }
 
+    // ADD a DATE, JAVA DATE -- how to add to SQL?
+
     public ArrayList<Integer> createEvent(String contractor, String[] employees, int phone, String mail, String address, int postnr, String postplace, String responsible, String date, String subject, String description, String status) {
     	// Check and verify every parameter
         // add errors to arraylist

@@ -1,0 +1,154 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>oss-parent</artifactId>
+    <groupId>org.sonatype.oss</groupId>
+    <version>1</version>
+  </parent>
+
+  <groupId>org.jbundle.thin.base.screen</groupId>
+  <artifactId>jcalendarbutton</artifactId>
+  <version>1.4.5</version>
+
+  <packaging>bundle</packaging>
+
+  <name>JCalendarButton - Date and Time Popup Buttons</name>
+  <description>JCalendarButton is a simple java swing component that displays a popup calendar next to a date input field.</description>
+  <url>http://www.jbundle.org/thin/base/screen/jcalendarbutton</url>
+
+  <licenses>
+    <license>
+      <name>The GNU General Public License, Version 3.0</name>
+      <url>http://www.gnu.org/licenses/gpl.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>http://jcalendarbutton.hg.sourceforge.net:8000/hgroot/jcalendarbutton/jcalendarbutton</url>
+    <connection>scm:hg:http://jcalendarbutton.hg.sourceforge.net:8000/hgroot/jcalendarbutton/jcalendarbutton</connection>
+    <developerConnection>scm:hg:ssh://doncorley@jcalendarbutton.hg.sourceforge.net/hgroot/jcalendarbutton/jcalendarbutton</developerConnection>
+  </scm>
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <issueManagement>
+  	<system>Tracker</system>
+  	<url>https://sourceforge.net/tracker/?group_id=239200</url>
+  </issueManagement>
+
+  <developers>
+  	<developer>
+  		<id>doncorley</id>
+  		<name>Don Corley</name>
+  		<email>don@donandann.com</email>
+  		<url>http://www.donandann.com</url>
+  		<timezone>PDT – Pacific Daylight Time (UTC -08:00)</timezone>
+  	</developer>
+  </developers>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Bundle-ManifestVersion>2</Bundle-ManifestVersion>
+            <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
+            <Export-Package>org.jbundle.thin.base.screen.jcalendarbutton.*</Export-Package>
+            <Bundle-Version>${project.version}</Bundle-Version>
+            <Import-Package>
+                *;resolution:=optional,
+            </Import-Package>
+          </instructions>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>2.1</version>
+      </plugin>
+
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>release-sign-artifacts</id>
+      <activation>
+        <property>
+          <name>performRelease</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.0</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+  <distributionManagement>
+    <site>
+      <id>jbundle.org</id>
+      <url>scp://www.jbundle.org://space/web/jbundle/thin/base/screen/jcalendarbutton</url>
+    </site>
+  </distributionManagement>
+
+</project>

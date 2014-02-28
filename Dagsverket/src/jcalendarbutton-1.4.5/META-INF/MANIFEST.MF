@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Export-Package: org.jbundle.thin.base.screen.jcalendarbutton;uses:="ja
+ vax.swing,javax.swing.border,javax.swing.event"
+Built-By: don
+Tool: Bnd-0.0.357
+Bundle-Name: JCalendarButton - Date and Time Popup Buttons
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.6.0_20
+Bundle-Version: 1.4.5
+Bnd-LastModified: 1275565398115
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.gnu.org/licenses/gpl.txt
+Bundle-Description: JCalendarButton is a simple java swing component t
+ hat displays a popup calendar next to a date input field.
+Bundle-SymbolicName: org.jbundle.thin.base.screen.jcalendarbutton
+Import-Package: javax.swing;resolution:=optional,javax.swing.border;re
+ solution:=optional,javax.swing.event;resolution:=optional,org.jbundle
+ .thin.base.screen.jcalendarbutton;resolution:=optional
+
