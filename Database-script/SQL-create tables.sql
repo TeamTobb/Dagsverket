@@ -1,6 +1,7 @@
 DROP TABLE events_has_employees;
 DROP TABLE users;
 DROP TABLE events;
+DROP TABLE employees;
 
 CREATE TABLE users(
 id INTEGER GENERATED ALWAYS AS IDENTITY,
@@ -27,10 +28,16 @@ CONSTRAINT events_pk PRIMARY KEY(event_id)
 
 CREATE TABLE events_has_employees(
 event_id INTEGER, 
-user_id INTEGER,
-CONSTRAINT events_has_employees_pk PRIMARY KEY(event_id, user_id)
+employee_id INTEGER,
+CONSTRAINT events_has_employees_pk PRIMARY KEY(event_id, employee_id)
+);
+
+CREATE TABLE employees(
+employee_id INTEGER GENERATED ALWAYS AS IDENTITY, 
+employee_name VARCHAR(30),
+CONSTRAINT employees_pk PRIMARY KEY(employee_id)
 );
 
 ALTER TABLE events_has_employees ADD CONSTRAINT event_id_fk FOREIGN KEY(event_id) REFERENCES events(event_id);
 
-ALTER TABLE events_has_employees ADD CONSTRAINT user_id_fk FOREIGN KEY(user_id) REFERENCES users(id);
+ALTER TABLE events_has_employees ADD CONSTRAINT employee_id_fk FOREIGN KEY(employee_id) REFERENCES employees(employee_id);
