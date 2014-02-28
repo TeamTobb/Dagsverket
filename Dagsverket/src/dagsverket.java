@@ -12,7 +12,7 @@
 import static javax.swing.JOptionPane.*;
 import java.util.*;
 
-import Backend.*;
+import java.awt.Color;
 
 public class dagsverket extends javax.swing.JFrame {
     
@@ -539,6 +539,10 @@ public class dagsverket extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField5ActionPerformed
 
     private void FerdigButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FerdigButtonActionPerformed
+        jLabel5.setForeground(Color.black);      
+        jLabel6.setForeground(Color.black);
+        jLabel16.setForeground(Color.black);         
+        jLabel13.setForeground(Color.black);
         String contractor = jTextField1.getText();
         int postnummer = 0;
         int telephone = 0;
@@ -575,6 +579,18 @@ public class dagsverket extends javax.swing.JFrame {
         }
         else{
             System.out.println(create_errors);
+            for(int i = 0; i<create_errors.size(); i++){
+                if(create_errors.get(i)==1){
+                    jLabel5.setForeground(Color.red);
+                }
+                if(create_errors.get(i)==2){
+                    jLabel6.setForeground(Color.red);
+                    jLabel16.setForeground(Color.red);
+                }
+                if(create_errors.get(i)==3){
+                    jLabel13.setForeground(Color.red);
+                }
+            }
         }
     }//GEN-LAST:event_FerdigButtonActionPerformed
 
