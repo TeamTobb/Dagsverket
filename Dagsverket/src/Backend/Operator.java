@@ -32,7 +32,7 @@ public class Operator {
     	return this.name;
     }
 
-    public ArrayList<Integer> createEvent(String contractor, String[] employees, int phone, String mail, String address, int postnr, String postplace, String responsible, String date, String subject, String text, String status) {
+    public ArrayList<Integer> createEvent(String contractor, String[] employees, int phone, String mail, String address, int postnr, String postplace, String responsible, String date, String subject, String description, String status) {
     	// Check and verify every parameter
         // add errors to arraylist
         ArrayList<Integer> errors = new ArrayList<Integer>();
@@ -42,7 +42,7 @@ public class Operator {
     	if(contractor == null || contractor.trim().equals("")) {
     		errors.add(NO_CONTRACTOR);
     	}
-        if(mail == null && phone <= 0) {
+        if(mail == null || mail.trim().equals("") && phone <= 0) {
             errors.add(NO_CONTACT_INFO);
         }
         if(subject == null || subject.trim().equals("")) {
