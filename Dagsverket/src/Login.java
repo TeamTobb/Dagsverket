@@ -104,7 +104,7 @@ public class Login extends javax.swing.JFrame {
         String selected = "";
         selected = jList2.getSelectedValue().toString();
         String[] navn = {selected};
-        
+        this.dispose();
         dagsverket.main(navn);
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
