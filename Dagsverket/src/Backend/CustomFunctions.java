@@ -11,6 +11,11 @@ package Backend;
  * @author borgarlie
  */
 public class CustomFunctions {
+
+	public static void connect() {
+		
+	}
+
     public static void onExit() {
 
     }
