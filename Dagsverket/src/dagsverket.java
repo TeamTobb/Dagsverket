@@ -10,6 +10,7 @@
  */
 
 import static javax.swing.JOptionPane.*;
+import java.util.*;
 
 import Backend.*;
 
@@ -541,14 +542,16 @@ public class dagsverket extends javax.swing.JFrame {
 
     private void FerdigButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FerdigButtonActionPerformed
         String contractor = jTextField1.getText();
+        int postnummer = 0;
+        int telephone = 0;
         try{
-            int telephone = Integer.parseInt(jTextField2.getText());
+            telephone = Integer.parseInt(jTextField2.getText());
         } catch(NumberFormatException e){
             System.out.println("Feil telefonnumer. Bare tall");
         }          
         String gateAdresse = jTextField6.getText();       
         try{
-            int postnummer = Integer.parseInt(jTextField7.getText());
+            postnummer = Integer.parseInt(jTextField7.getText());
         }
         catch(NumberFormatException e){
             System.out.println("Feil postnummer. Bare tall");
@@ -557,14 +560,24 @@ public class dagsverket extends javax.swing.JFrame {
         String epostAdresse = jTextField9.getText();   
         String topic = jTextField5.getText();     
         String description = jTextArea1.getText();
-        Object ansvarlige = jComboBox1.getSelectedItem();
+        
+        String ansvarlige = (String)jComboBox1.getSelectedItem();
+        
         String befaring = jTextField4.getText(); 
         
         String[] arbeidstakere = new String[jList1.getModel().getSize()];     
         for(int i = 0; i<arbeidstakere.length; i++){
             arbeidstakere[i] = (String) jList1.getModel().getElementAt(i);        
         }    
-        Object status = jComboBox2.getSelectedItem();         
+        String status = (String)jComboBox2.getSelectedItem(); 
+        
+        ArrayList<Integer> create_errors = op.createEvent(contractor, arbeidstakere, telephone, epostAdresse, gateAdresse, postnummer, poststed, ansvarlige, befaring, topic, description, status);
+        if(create_errors == null){
+            System.out.println("hei");
+        }
+        else{
+            System.out.println(create_errors);
+        }
     }//GEN-LAST:event_FerdigButtonActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
