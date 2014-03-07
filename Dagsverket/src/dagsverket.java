@@ -856,6 +856,11 @@ public class dagsverket extends javax.swing.JFrame {
         }
         String status = (String)jComboBox2.getSelectedItem();
         ArrayList<Integer> create_errors = op.createEvent(contractor, arbeidstakere, telephone, epostAdresse, gateAdresse, postnummer, poststed, ansvarlige, befaring, topic, description, status);
+       // op.createEventTest(contractor, arbeidstakere, telephone, epostAdresse, gateAdresse, postnummer, poststed, ansvarlige, befaring, topic, description, status);
+        
+        String tid = "";
+        op.createEventTest(contractor, telephone, epostAdresse, gateAdresse, postnummer, poststed, ansvarlige, befaring, tid, topic, description, status);
+        
         if(create_errors == null){
             System.out.println("hei");
         }
