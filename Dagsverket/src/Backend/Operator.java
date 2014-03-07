@@ -30,7 +30,7 @@ public class Operator {
 
     public Operator(String name) {
             this.name = name;
-            //this.conn = connect();
+            this.conn = connect();
     }
     
     public void fyllTabell(JTable tabell){
@@ -43,11 +43,9 @@ public class Operator {
     }
 
     private Connection connect() {
-        // String databasedriver = "org.apache.derby.jdbc.ClientDriver";
         Connection conn_new = null;
         try {
-            // Class.forName(databasedriver);
-            String databasenavn = "jdbc:derby://localhost:1527/persondata;user=;password="; // no username / pw
+            String databasenavn = "jdbc:derby://localhost:1527/Dagsverket;user=root;password=root"; // no username / pw
             conn_new  = DriverManager.getConnection(databasenavn);
         } catch (Exception e) {
             System.out.println("Feil 1: " + e);
@@ -69,6 +67,20 @@ public class Operator {
 
     public String getName() {
     	return this.name;
+    }
+    
+    public void createEventTest(String contractor, int phone, String mail, String address, int postnr, String postplace, String responsible, String checkup_date, String tid, String subject, String description, String status){
+        String sqlStatement = "INSERT INTO events VALUES(DEFAULT, '"+contractor + 
+                                "', "+ phone + ", '" + mail + "', '" + address + "', "+postnr+", '"+
+                                postplace + "', '" + responsible + "', '" + checkup_date + "', '" + tid +
+                                "', '" + subject + "', '" + description + "', '"+ status + "')";
+        try{
+            Statement setning = this.conn.createStatement();
+            setning.executeUpdate(sqlStatement);
+        }
+        catch(SQLException e){
+            System.out.println("statement feil");
+        }
     }
     //OVERLOADING AV KONSTRUKTØR FOR Å FÅ DET TIL Å FUNKE ATM 
     public ArrayList<Integer> createEvent(String contractor, String[] employees, int phone, String mail, String address, int postnr, String postplace, String responsible, String checkup_date, String subject, String description, String status){
