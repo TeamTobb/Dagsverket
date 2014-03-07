@@ -15,6 +15,8 @@
 
 import java.util.*;
 import java.sql.*;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 public class Operator {
     // ERROR MESSAGES
@@ -29,6 +31,14 @@ public class Operator {
     public Operator(String name) {
             this.name = name;
             //this.conn = connect();
+    }
+    
+    public void fyllTabell(JTable tabell){
+        DefaultTableModel model = (DefaultTableModel) tabell.getModel();
+        String[] testData = {"DATA", "DATA", "DATA", "DATA", "DATA"};
+        for(int i = 0; i<15; i++){
+            model.addRow(testData);        
+        }
     }
 
     private Connection connect() {
