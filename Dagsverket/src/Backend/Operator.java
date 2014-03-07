@@ -37,7 +37,8 @@ public class Operator {
         DefaultTableModel model = (DefaultTableModel) tabell.getModel();
         String[] testData = {"DATA", "DATA", "DATA", "DATA", "DATA"};
         for(int i = 0; i<15; i++){
-            model.addRow(testData);        
+            model.addRow(testData);   
+            System.out.println("JORGEN");
         }
     }
 
