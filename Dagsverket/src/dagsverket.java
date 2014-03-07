@@ -907,7 +907,7 @@ public class dagsverket extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        op.fyllTabell(jTable4);
+        op.fyllTabellTest(jTable3);
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**

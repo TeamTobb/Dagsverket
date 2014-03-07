@@ -33,6 +33,29 @@ public class Operator {
             this.conn = connect();
     }
     
+    public void fyllTabellTest(JTable tabell){
+        try{
+        Statement setning = this.conn.createStatement();
+        String SQL = "select * from events";
+        ResultSet rs = setning.executeQuery(SQL);
+        int id = 0;
+        String contractor = ""; 
+        int tlf = 0;
+        String topic = "";
+        
+        DefaultTableModel model = (DefaultTableModel) tabell.getModel();
+        while(rs.next()){ 
+            id = rs.getInt("event_id");
+            contractor= rs.getString("contractor");
+            tlf = rs.getInt("phone");
+            topic = rs.getString("subject");
+            model.insertRow(tabell.getRowCount(), new Object[] {id, contractor, tlf, topic});
+        }   
+        }catch(Exception e){
+            System.out.println("feil.");
+        }
+    }
+    
     public void fyllTabell(JTable tabell){
         DefaultTableModel model = (DefaultTableModel) tabell.getModel();
         String[] testData = {"DATA", "DATA", "DATA", "DATA", "DATA"};
