@@ -130,6 +130,7 @@ public class Operator {
                 setning.executeUpdate(insert);
             } catch (SQLException e) {
                 System.out.println("Feil 2: " + e);
+                // add to errors /4?
             } finally {
                 try {
                     if (setning != null) {
