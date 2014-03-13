@@ -1,7 +1,7 @@
 /**
  *
  * Opprydder.java  - "Programmering i Java", 4.utgave - 2009-07-01
- * Metoder for å rydde opp etter databasebruk
+ * Metoder for ï¿½ rydde opp etter databasebruk
  */
 //package mittBibliotek;
 import java.sql.*;
@@ -57,7 +57,7 @@ public class Opprydder {
   }
 
   public static void skrivMelding(Exception e, String melding) {
-    System.err.println("*** Feil oppstått: " + melding + ". ***");
+    System.err.println("*** Feil oppstï¿½tt: " + melding + ". ***");
     e.printStackTrace(System.err);
   }
 }
