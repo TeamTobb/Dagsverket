@@ -92,31 +92,31 @@ public class Operator {
     	return this.name;
     }
     
-    public void createEventTest(String contractor, int phone, String mail, String address, int postnr, String postplace, String responsible, String checkup_date, String tid, String subject, String description, String status){
-        String hoho = "INSERT INTO events VALUES(DEFAULT, '"+contractor + 
-                                "', "+ phone + ", '" + mail + "', '" + address + "', "+postnr+", '"+
-                                postplace + "', '" + responsible + "', '" + checkup_date + "', '" + tid +
-                                "', '" + subject + "', '" + description + "', '"+ status + "')";
-      try{
-          PreparedStatement sqlStatement = this.conn.prepareStatement("insert into events values(DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-          sqlStatement.setString(1, contractor);
-          sqlStatement.setInt(2, phone);
-          sqlStatement.setString(3, mail);
-          sqlStatement.setString(4, address);
-          sqlStatement.setInt(5, postnr);
-          sqlStatement.setString(6, postplace);
-          sqlStatement.setString(7, responsible);
-          sqlStatement.setString(8, checkup_date);
-          sqlStatement.setString(9, tid);
-          sqlStatement.setString(10, subject);
-          sqlStatement.setString(11, description);
-          sqlStatement.setString(12, status);
-          sqlStatement.executeUpdate();       
-      }
-      catch(SQLException e){
-            System.out.println("feil createStatement");
-      }     
-    }
+    // public void createEventTest(String contractor, int phone, String mail, String address, int postnr, String postplace, String responsible, String checkup_date, String tid, String subject, String description, String status){
+    //     String hoho = "INSERT INTO events VALUES(DEFAULT, '"+contractor + 
+    //                             "', "+ phone + ", '" + mail + "', '" + address + "', "+postnr+", '"+
+    //                             postplace + "', '" + responsible + "', '" + checkup_date + "', '" + tid +
+    //                             "', '" + subject + "', '" + description + "', '"+ status + "')";
+    //   try{
+    //       PreparedStatement sqlStatement = this.conn.prepareStatement("insert into events values(DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    //       sqlStatement.setString(1, contractor);
+    //       sqlStatement.setInt(2, phone);
+    //       sqlStatement.setString(3, mail);
+    //       sqlStatement.setString(4, address);
+    //       sqlStatement.setInt(5, postnr);
+    //       sqlStatement.setString(6, postplace);
+    //       sqlStatement.setString(7, responsible);
+    //       sqlStatement.setString(8, checkup_date);
+    //       sqlStatement.setString(9, tid);
+    //       sqlStatement.setString(10, subject);
+    //       sqlStatement.setString(11, description);
+    //       sqlStatement.setString(12, status);
+    //       sqlStatement.executeUpdate();       
+    //   }
+    //   catch(SQLException e){
+    //         System.out.println("feil createStatement");
+    //   }     
+    // }
     
     // ADD a DATE, JAVA DATE -- how to add to SQL?
     public ArrayList<Integer> createEvent(String contractor, String[] employees, int phone, String mail, String address, int postnr, String postplace, String responsible, String checkup_date, String date, String time, String subject, String description, String status) {
@@ -140,20 +140,29 @@ public class Operator {
 
         if(errors == null || errors.size() == 0) {
             // updateDatabase();
-
-            Statement setning = null;
-            String insert = "INSERT INTO events VALUES(" + ");";
-            // CHANGE THIS TO CORRECT VALUES....
+            PreparedStatement sqlStatement = null;
             try {
-                setning = this.conn.createStatement();
-                setning.executeUpdate(insert);
+                sqlStatement = this.conn.prepareStatement("insert into events values(DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                sqlStatement.setString(1, contractor);
+                sqlStatement.setInt(2, phone);
+                sqlStatement.setString(3, mail);
+                sqlStatement.setString(4, address);
+                sqlStatement.setInt(5, postnr);
+                sqlStatement.setString(6, postplace);
+                sqlStatement.setString(7, responsible);
+                sqlStatement.setString(8, checkup_date);
+                sqlStatement.setString(9, time);
+                sqlStatement.setString(10, subject);
+                sqlStatement.setString(11, description);
+                sqlStatement.setString(12, status);
+                sqlStatement.executeUpdate(); 
             } catch (SQLException e) {
                 System.out.println("Feil 2: " + e);
                 // add to errors /4?
             } finally {
                 try {
-                    if (setning != null) {
-                        setning.close();
+                    if (sqlStatement != null) {
+                        sqlStatement.close();
                     }
                 } catch (SQLException e) {
                     System.out.println("Feil 3: " + e);
