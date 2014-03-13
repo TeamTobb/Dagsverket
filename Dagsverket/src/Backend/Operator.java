@@ -32,6 +32,49 @@ public class Operator {
             this.name = name;
             this.conn = connect();
     }
+    public void addEmployee(String firstName, String lastName){
+        PreparedStatement sqlStatement = null;
+        try{
+            sqlStatement = this.conn.prepareStatement("insert into employees values (DEFAULT, ?, ?, null, null)");
+            sqlStatement.setString(1, firstName);
+            sqlStatement.setString(2, lastName);
+            sqlStatement.executeUpdate();
+        }
+        catch(SQLException e){
+            System.out.println("feil i addEmployee");
+        }
+        finally{
+            if(sqlStatement != null){
+                try{
+                    sqlStatement.close();
+                }
+                catch(SQLException a){
+                    System.out.println("feil i close addEmployee");
+                }
+            }
+        }
+    }
+    
+    public void updateEmployeeListLeft(JTable tabell){
+        try{
+        Statement setning = this.conn.createStatement();
+        String SQL = "select * from employees";
+        ResultSet rs = setning.executeQuery(SQL);
+        String firstName = "";
+        String lastName = ""; 
+        String lastRegDate = "";
+        DefaultTableModel model = (DefaultTableModel) tabell.getModel();
+        model.setRowCount(0);
+        while(rs.next()){
+            firstName = rs.getString("firstName");
+            lastName= rs.getString("lastName");
+            lastRegDate = rs.getString("lastRegDate");
+            model.insertRow(tabell.getRowCount(), new Object[] {firstName, lastName, lastRegDate});
+        }   
+        }catch(Exception e){
+            System.out.println("feil i update venstre liste");
+        }
+    }
     
     public void fyllTabellTest(JTable tabell){
         try{

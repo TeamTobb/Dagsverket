@@ -15,6 +15,7 @@ import java.util.Date;
 
 import java.awt.Color;
 import java.text.SimpleDateFormat;
+import javax.swing.*;
 
 public class dagsverket extends javax.swing.JFrame {
     
@@ -652,7 +653,22 @@ public class dagsverket extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        //TODO add your handling code here
+      JTextField xField = new JTextField(5);
+      JTextField yField = new JTextField(5);
+
+      JPanel myPanel = new JPanel();
+      myPanel.add(new JLabel("Fornavn:"));
+      myPanel.add(xField);
+      myPanel.add(Box.createHorizontalStrut(15)); // a spacer
+      myPanel.add(new JLabel("Etternavn:"));
+      myPanel.add(yField);
+
+      int result = JOptionPane.showConfirmDialog(null, myPanel, 
+               "Skriv inn fornavn og etternavn", JOptionPane.OK_CANCEL_OPTION);
+      if (result == JOptionPane.OK_OPTION) {
+         op.addEmployee(xField.getText(), yField.getText());
+         op.updateEmployeeListLeft(jTable4);
+      }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
