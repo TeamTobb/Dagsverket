@@ -33,11 +33,14 @@ CONSTRAINT events_has_employees_pk PRIMARY KEY(event_id, employee_id)
 );
 
 CREATE TABLE employees(
-employee_id INTEGER GENERATED ALWAYS AS IDENTITY, 
-employee_name VARCHAR(30),
-CONSTRAINT employees_pk PRIMARY KEY(employee_id)
+id INTEGER GENERATED ALWAYS AS IDENTITY, 
+firstName VARCHAR(30),
+lastName VARCHAR(30),
+lastWorkDate VARCHAR(30),
+lastRegDate VARCHAR(30),
+CONSTRAINT employees_pk PRIMARY KEY(id)
 );
 
 ALTER TABLE events_has_employees ADD CONSTRAINT event_id_fk FOREIGN KEY(event_id) REFERENCES events(event_id);
 
-ALTER TABLE events_has_employees ADD CONSTRAINT employee_id_fk FOREIGN KEY(employee_id) REFERENCES employees(employee_id);
+ALTER TABLE events_has_employees ADD CONSTRAINT employee_id_fk FOREIGN KEY(employee_id) REFERENCES employees(id);
