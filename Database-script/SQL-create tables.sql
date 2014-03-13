@@ -44,3 +44,8 @@ CONSTRAINT employees_pk PRIMARY KEY(id)
 ALTER TABLE events_has_employees ADD CONSTRAINT event_id_fk FOREIGN KEY(event_id) REFERENCES events(event_id);
 
 ALTER TABLE events_has_employees ADD CONSTRAINT employee_id_fk FOREIGN KEY(employee_id) REFERENCES employees(id);
+
+INSERT INTO users VALUES(DEFAULT, 'Borgar');
+INSERT INTO users VALUES(DEFAULT, 'Bjørn');
+INSERT INTO users VALUES(DEFAULT, 'Thomas');
+INSERT INTO users VALUES(DEFAULT, 'Jørgen');
