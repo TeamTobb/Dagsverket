@@ -43,7 +43,7 @@ public class dagsverket extends javax.swing.JFrame {
         jPopupMenu1 = new javax.swing.JPopupMenu();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        nEventHeaderLabel = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
         jLabel5 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -116,10 +116,10 @@ public class dagsverket extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel2.setText("Nytt oppdrag ");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(34, 0, 135, 29);
+        nEventHeaderLabel.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        nEventHeaderLabel.setText("Nytt oppdrag ");
+        jPanel1.add(nEventHeaderLabel);
+        nEventHeaderLabel.setBounds(34, 0, 135, 29);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -232,6 +232,23 @@ public class dagsverket extends javax.swing.JFrame {
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField7ActionPerformed(evt);
+            }
+        });
+        jTextField7.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextField7FocusLost(evt);
+            }
+        });
+        jTextField7.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                jTextField7InputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
+        jTextField7.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jTextField7PropertyChange(evt);
             }
         });
         jPanel1.add(jTextField7);
@@ -833,6 +850,20 @@ public class dagsverket extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jCalendarButton1PropertyChange
 
+    private void jTextField7PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTextField7PropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7PropertyChange
+
+    private void jTextField7InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jTextField7InputMethodTextChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7InputMethodTextChanged
+
+    private void jTextField7FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField7FocusLost
+        // TODO add your handling code here:
+        jTextField3.setText(jTextField7.getText());
+        // set Field ut i fra postnr = poststed i database!!! 
+    }//GEN-LAST:event_jTextField7FocusLost
+
     /**
      * @param args the command line arguments
      */
@@ -901,7 +932,6 @@ public class dagsverket extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -950,5 +980,6 @@ public class dagsverket extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JLabel nEventHeaderLabel;
     // End of variables declaration//GEN-END:variables
 }
