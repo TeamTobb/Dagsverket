@@ -23,7 +23,7 @@ public class Operator {
     public static int NO_CONTRACTOR = 1;
     public static int NO_CONTACT_INFO = 2;
     public static int NO_SUBJECT = 3;
-
+    
     // Object variables
     private String name;
     private Connection conn;
@@ -93,36 +93,32 @@ public class Operator {
     }
     
     public void createEventTest(String contractor, int phone, String mail, String address, int postnr, String postplace, String responsible, String checkup_date, String tid, String subject, String description, String status){
-        String sqlStatement = "INSERT INTO events VALUES(DEFAULT, '"+contractor + 
+        String hoho = "INSERT INTO events VALUES(DEFAULT, '"+contractor + 
                                 "', "+ phone + ", '" + mail + "', '" + address + "', "+postnr+", '"+
                                 postplace + "', '" + responsible + "', '" + checkup_date + "', '" + tid +
                                 "', '" + subject + "', '" + description + "', '"+ status + "')";
-        try{
-            Statement setning = this.conn.createStatement();
-            setning.executeUpdate(sqlStatement);
-        }
-        catch(SQLException e){
-            System.out.println("statement feil");
-        }
+      try{
+          PreparedStatement sqlStatement = this.conn.prepareStatement("insert into events values(DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+          sqlStatement.setString(1, contractor);
+          sqlStatement.setInt(2, phone);
+          sqlStatement.setString(3, mail);
+          sqlStatement.setString(4, address);
+          sqlStatement.setInt(5, postnr);
+          sqlStatement.setString(6, postplace);
+          sqlStatement.setString(7, responsible);
+          sqlStatement.setString(8, checkup_date);
+          sqlStatement.setString(9, tid);
+          sqlStatement.setString(10, subject);
+          sqlStatement.setString(11, description);
+          sqlStatement.setString(12, status);
+          sqlStatement.executeUpdate();       
+      }
+      catch(SQLException e){
+            System.out.println("feil createStatement");
+      }     
     }
-    //OVERLOADING AV KONSTRUKTØR FOR Å FÅ DET TIL Å FUNKE ATM 
-    public ArrayList<Integer> createEvent(String contractor, String[] employees, int phone, String mail, String address, int postnr, String postplace, String responsible, String checkup_date, String subject, String description, String status){
-        ArrayList<Integer> errors = new ArrayList<Integer>();
-        // important: contractor, phone / mail, subject
-    	if(contractor == null || contractor.trim().equals("")) {
-    		errors.add(NO_CONTRACTOR);
-    	}
-        if(mail == null || mail.trim().equals("") && phone <= 0) {
-            errors.add(NO_CONTACT_INFO);
-        }
-        if(subject == null || subject.trim().equals("")) {
-            errors.add(NO_SUBJECT);
-        }
-        return errors;
-    }
-
+    
     // ADD a DATE, JAVA DATE -- how to add to SQL?
-
     public ArrayList<Integer> createEvent(String contractor, String[] employees, int phone, String mail, String address, int postnr, String postplace, String responsible, String checkup_date, String date, String time, String subject, String description, String status) {
         // date & time is not string. ??
 
