@@ -12,6 +12,8 @@
 import static javax.swing.JOptionPane.*;
 import java.util.*;
 import java.util.Date;
+import java.util.Calendar;
+import java.text.DateFormat;
 
 import java.awt.Color;
 import java.text.SimpleDateFormat;
@@ -20,8 +22,10 @@ import javax.swing.*;
 public class dagsverket extends javax.swing.JFrame {
     
     public static Operator op;
+    public static DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+    public static Calendar today = Calendar.getInstance();
     
-  
+
     public dagsverket() {
         initComponents();
     }
@@ -57,13 +61,11 @@ public class dagsverket extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
         jCalendarButton2 = new net.sourceforge.jcalendarbutton.JCalendarButton();
         jComboBox3 = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
         jCalendarButton3 = new net.sourceforge.jcalendarbutton.JCalendarButton();
         jLabel12 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -81,7 +83,11 @@ public class dagsverket extends javax.swing.JFrame {
         jScrollPane7 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
         jLabel24 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        jCalendarButton1 = new net.sourceforge.jcalendarbutton.JCalendarButton();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
@@ -149,12 +155,13 @@ public class dagsverket extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(111, 217, 206, 28);
+        jTextField2.setBounds(111, 217, 270, 28);
 
         jLabel7.setText("Adresse");
         jPanel1.add(jLabel7);
         jLabel7.setBounds(10, 155, 50, 16);
 
+        jTextField3.setText("updateOnPostnr");
         jTextField3.setToolTipText("...");
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,11 +180,11 @@ public class dagsverket extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(112, 409, 350, 190);
+        jScrollPane1.setBounds(112, 439, 350, 160);
 
         jLabel9.setText("Beskrivelse / Annet:");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(10, 393, 126, 16);
+        jLabel9.setBounds(10, 410, 126, 16);
 
         FerdigButton.setText("Ferdig");
         FerdigButton.addActionListener(new java.awt.event.ActionListener() {
@@ -190,11 +197,11 @@ public class dagsverket extends javax.swing.JFrame {
 
         jLabel10.setText("Status:");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(540, 360, 60, 16);
+        jLabel10.setBounds(540, 390, 60, 16);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Uferdig", "Aktiv", "Ferdig" }));
         jPanel1.add(jComboBox2);
-        jComboBox2.setBounds(660, 360, 96, 27);
+        jComboBox2.setBounds(660, 390, 102, 27);
 
         jLabel13.setText("Arbeidets art:");
         jPanel1.add(jLabel13);
@@ -211,16 +218,6 @@ public class dagsverket extends javax.swing.JFrame {
         jLabel14.setText("Befaring: ");
         jPanel1.add(jLabel14);
         jLabel14.setBounds(540, 70, 80, 16);
-
-        jTextField4.setEditable(false);
-        jTextField4.setText("Dato");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField4);
-        jTextField4.setBounds(660, 70, 84, 28);
 
         jTextField6.setToolTipText("...");
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
@@ -256,7 +253,7 @@ public class dagsverket extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jCalendarButton2);
-        jCalendarButton2.setBounds(750, 70, 28, 27);
+        jCalendarButton2.setBounds(660, 70, 28, 27);
 
         String[] tider = new String[48];
         int teller = 0;
@@ -283,21 +280,11 @@ public class dagsverket extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jComboBox3);
-        jComboBox3.setBounds(312, 347, 72, 27);
+        jComboBox3.setBounds(300, 350, 72, 27);
 
         jLabel3.setText("Ønsket oppstart:");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(10, 353, 106, 16);
-
-        jTextField10.setEditable(false);
-        jTextField10.setText("Dato");
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField10);
-        jTextField10.setBounds(128, 347, 67, 28);
 
         jCalendarButton3.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -315,11 +302,11 @@ public class dagsverket extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jCalendarButton3);
-        jCalendarButton3.setBounds(201, 347, 28, 27);
+        jCalendarButton3.setBounds(120, 350, 28, 27);
 
-        jLabel12.setText("Klokkeslett");
+        jLabel12.setText("Kl.");
         jPanel1.add(jLabel12);
-        jLabel12.setBounds(235, 351, 71, 16);
+        jLabel12.setBounds(280, 350, 20, 16);
 
         jLabel15.setText("Mottatt av:");
         jPanel1.add(jLabel15);
@@ -333,13 +320,13 @@ public class dagsverket extends javax.swing.JFrame {
         jPanel1.add(jLabel19);
         jLabel19.setBounds(10, 61, 36, 16);
 
-        jLabel20.setText("navnFraDb");
+        jLabel20.setText(op.getName());
         jPanel1.add(jLabel20);
-        jLabel20.setBounds(117, 61, 67, 16);
+        jLabel20.setBounds(117, 61, 84, 16);
 
-        jLabel21.setText("Dato");
+        jLabel21.setText(dateFormat.format(today.getTime()));
         jPanel1.add(jLabel21);
-        jLabel21.setBounds(117, 90, 30, 16);
+        jLabel21.setBounds(117, 90, 84, 16);
 
         jLabel22.setText("Navn:");
         jPanel1.add(jLabel22);
@@ -355,7 +342,7 @@ public class dagsverket extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField8);
-        jTextField8.setBounds(660, 30, 14, 28);
+        jTextField8.setBounds(700, 30, 80, 28);
 
         jLabel16.setText("Avtalt oppstart:");
         jPanel1.add(jLabel16);
@@ -370,22 +357,41 @@ public class dagsverket extends javax.swing.JFrame {
         jScrollPane6.setViewportView(jTextArea2);
 
         jPanel1.add(jScrollPane6);
-        jScrollPane6.setBounds(660, 160, 244, 84);
+        jScrollPane6.setBounds(660, 160, 270, 110);
 
         jTextArea3.setColumns(20);
         jTextArea3.setRows(5);
         jScrollPane7.setViewportView(jTextArea3);
 
         jPanel1.add(jScrollPane7);
-        jScrollPane7.setBounds(660, 260, 244, 84);
+        jScrollPane7.setBounds(660, 280, 270, 100);
 
         jLabel24.setText("Kontaktpersoner:");
         jPanel1.add(jLabel24);
-        jLabel24.setBounds(540, 260, 108, 16);
+        jLabel24.setBounds(540, 280, 108, 16);
 
-        jTextField9.setText("jTextField9");
-        jPanel1.add(jTextField9);
-        jTextField9.setBounds(660, 110, 84, 28);
+        jCalendarButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCalendarButton1ActionPerformed(evt);
+            }
+        });
+        jCalendarButton1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jCalendarButton1PropertyChange(evt);
+            }
+        });
+        jPanel1.add(jCalendarButton1);
+        jCalendarButton1.setBounds(660, 110, 30, 27);
+        jPanel1.add(jLabel17);
+        jLabel17.setBounds(710, 120, 210, 20);
+
+        jLabel25.setText("Postnr");
+        jPanel1.add(jLabel25);
+        jLabel25.setBounds(10, 190, 40, 16);
+        jPanel1.add(jLabel26);
+        jLabel26.setBounds(710, 80, 210, 20);
+        jPanel1.add(jLabel27);
+        jLabel27.setBounds(150, 360, 120, 16);
 
         jTabbedPane3.addTab("+", jPanel1);
 
@@ -679,9 +685,9 @@ public class dagsverket extends javax.swing.JFrame {
         if (evt.getNewValue() instanceof Date){
             Date dato = (Date)evt.getNewValue();
             System.out.println(dato.toString());
-            SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yy");
+            SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
             String date = DATE_FORMAT.format(dato);
-            jTextField10.setText(date);
+            jLabel27.setText(date);
         }
     }//GEN-LAST:event_jCalendarButton3PropertyChange
 
@@ -693,10 +699,6 @@ public class dagsverket extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCalendarButton3StateChanged
 
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
-
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
         System.out.println(jComboBox3.getSelectedItem());        // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox3ActionPerformed
@@ -705,9 +707,9 @@ public class dagsverket extends javax.swing.JFrame {
         if (evt.getNewValue() instanceof Date){
             Date dato = (Date)evt.getNewValue();
             System.out.println(dato.toString());
-            SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yy");
+            SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
             String date = DATE_FORMAT.format(dato);
-            jTextField4.setText(date);
+            jLabel26.setText(date);
         }
     }//GEN-LAST:event_jCalendarButton2PropertyChange
 
@@ -726,10 +728,6 @@ public class dagsverket extends javax.swing.JFrame {
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
@@ -756,13 +754,12 @@ public class dagsverket extends javax.swing.JFrame {
             System.out.println("Feil postnummer. Bare tall");
         }
         String poststed = jTextField3.getText().trim();
-        String epostAdresse = jTextField9.getText().trim();
         String topic = jTextField5.getText().trim();
         String description = jTextArea1.getText().trim();
 
         String ansvarlige = (String)jComboBox1.getSelectedItem();
 
-        String befaring = jTextField4.getText().trim();
+        String befaring = jLabel26.getText().trim();
 
         /* BRUKES IKKE LENGRE
         String[] arbeidstakere = new String[jList3.getModel().getSize()];
@@ -773,8 +770,9 @@ public class dagsverket extends javax.swing.JFrame {
         String[] arbeidstakere = null;
         String status = (String)jComboBox2.getSelectedItem();
 
-        String date = "";
+        String date = jLabel21.getText().trim();
         String time = "";
+        String epostAdresse = "";
         ArrayList<Integer> create_errors = op.createEvent(contractor, arbeidstakere, telephone, epostAdresse, gateAdresse, postnummer, poststed, ansvarlige, befaring, date, time, topic, description, status);
         // op.createEventTest(contractor, arbeidstakere, telephone, epostAdresse, gateAdresse, postnummer, poststed, ansvarlige, befaring, topic, description, status);
 
@@ -821,6 +819,19 @@ public class dagsverket extends javax.swing.JFrame {
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField8ActionPerformed
+
+    private void jCalendarButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCalendarButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCalendarButton1ActionPerformed
+
+    private void jCalendarButton1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jCalendarButton1PropertyChange
+        if (evt.getNewValue() instanceof Date){
+            Date dato = (Date)evt.getNewValue();
+            SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
+            String date = DATE_FORMAT.format(dato);
+            jLabel17.setText(date);
+        }
+    }//GEN-LAST:event_jCalendarButton1PropertyChange
 
     /**
      * @param args the command line arguments
@@ -873,6 +884,7 @@ public class dagsverket extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private net.sourceforge.jcalendarbutton.JCalendarButton jCalendarButton1;
     private net.sourceforge.jcalendarbutton.JCalendarButton jCalendarButton2;
     private net.sourceforge.jcalendarbutton.JCalendarButton jCalendarButton3;
     private javax.swing.JComboBox jComboBox1;
@@ -886,6 +898,7 @@ public class dagsverket extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -894,6 +907,9 @@ public class dagsverket extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -926,15 +942,12 @@ public class dagsverket extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JToggleButton jToggleButton2;
     // End of variables declaration//GEN-END:variables
