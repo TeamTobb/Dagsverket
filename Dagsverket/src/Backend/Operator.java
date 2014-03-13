@@ -13,6 +13,7 @@
  * @author borgarlie
  */
 
+import Backend.DatabaseSetup;
 import java.util.*;
 import java.sql.*;
 import javax.swing.JTable;
@@ -30,7 +31,7 @@ public class Operator {
 
     public Operator(String name) {
             this.name = name;
-            this.conn = connect();
+        this.conn = DatabaseSetup.connect();
     }
     public void addEmployee(String firstName, String lastName){
         PreparedStatement sqlStatement = null;
@@ -107,30 +108,6 @@ public class Operator {
             System.out.println("JORGEN");
         }
     }
-
-    private Connection connect() {
-        Connection conn_new = null;
-        try {
-            String databasenavn = "jdbc:derby://localhost:1527/Dagsverket;user=root;password=root"; // no username / pw
-            conn_new  = DriverManager.getConnection(databasenavn);
-        } catch (Exception e) {
-            System.out.println("Feil 1: " + e);
-            System.exit(0); // ?? gjor noe annet...?
-        }
-        return conn_new;
-    }
-
-    public void endConnection() {
-        // end connection
-        try {
-            if (this.conn != null) {
-                this.conn.close();
-            }
-        } catch (SQLException e) {
-            System.out.println("Feil 2: " + e);
-        }
-    }
-
     public String getName() {
     	return this.name;
     }

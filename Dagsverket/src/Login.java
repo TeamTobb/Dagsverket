@@ -59,7 +59,7 @@ public class Login extends javax.swing.JFrame {
         });
 
         jList2.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = users.getUsernames();
+            String[] strings = users.updateUsernames();
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
@@ -106,13 +106,12 @@ public class Login extends javax.swing.JFrame {
         String[] navn = {selected};
         this.dispose();
         dagsverket.main(navn);
-// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         String nyBruker = javax.swing.JOptionPane.showInputDialog("Skriv inn navn på ny bruker");
         users.createUser(nyBruker);
-        jList2.setListData(users.getUsernames());
+        jList2.setListData(users.updateUsernames());
         jList2.updateUI();
     }//GEN-LAST:event_jButton2ActionPerformed
 
