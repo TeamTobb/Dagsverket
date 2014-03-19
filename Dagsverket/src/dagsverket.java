@@ -41,8 +41,8 @@ public class dagsverket extends javax.swing.JFrame {
     private void initComponents() {
 
         jPopupMenu1 = new javax.swing.JPopupMenu();
-        jTabbedPane3 = new javax.swing.JTabbedPane();
-        labelCreateCaseDEquipment = new javax.swing.JPanel();
+        mainTabs = new javax.swing.JTabbedPane();
+        panelCreateCase = new javax.swing.JPanel();
         labelCreateCaseHeader = new javax.swing.JLabel();
         comboBoxCreateCaseSupervisor = new javax.swing.JComboBox();
         labelCreateCaseDEmployer = new javax.swing.JLabel();
@@ -77,7 +77,7 @@ public class dagsverket extends javax.swing.JFrame {
         labelCreateCaseDPrice = new javax.swing.JLabel();
         textFieldCreateCasePrice = new javax.swing.JTextField();
         labelCreateCaseDStartDate = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
+        labelCreateCaseDEquipment = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         textAreaCreateCaseEquipment = new javax.swing.JTextArea();
         jScrollPane7 = new javax.swing.JScrollPane();
@@ -88,39 +88,39 @@ public class dagsverket extends javax.swing.JFrame {
         labelCreateCaseDPostnr = new javax.swing.JLabel();
         labelCreateCaseInspectDate = new javax.swing.JLabel();
         labelCreateCaseReqDate = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        panelDraft = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel5 = new javax.swing.JPanel();
+        panelActiveMain = new javax.swing.JPanel();
+        activeTabs = new javax.swing.JTabbedPane();
+        panelActiveTable = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
-        jPanel6 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
+        tableActive = new javax.swing.JTable();
+        panelActiveCal = new javax.swing.JPanel();
+        panelHistory = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        jPanel7 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        tableHistory = new javax.swing.JTable();
+        panelAttendance = new javax.swing.JPanel();
+        buttonAttendanceNewPerson = new javax.swing.JButton();
+        buttonAttendanceMoveRight = new javax.swing.JButton();
+        buttonAttendanceMoveLeft = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton6 = new javax.swing.JButton();
+        tableAttendanceShown = new javax.swing.JTable();
+        buttonAttendanceHistory = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
-        jLabel4 = new javax.swing.JLabel();
+        tableAttendanceNotShown = new javax.swing.JTable();
+        testDataButton = new javax.swing.JToggleButton();
+        logoutButton = new javax.swing.JToggleButton();
+        labelMainUsername = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        labelCreateCaseDEquipment.setBackground(new java.awt.Color(255, 51, 51));
-        labelCreateCaseDEquipment.setForeground(new java.awt.Color(255, 51, 0));
-        labelCreateCaseDEquipment.setLayout(null);
+        panelCreateCase.setBackground(new java.awt.Color(255, 51, 51));
+        panelCreateCase.setForeground(new java.awt.Color(255, 51, 0));
+        panelCreateCase.setLayout(null);
 
         labelCreateCaseHeader.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         labelCreateCaseHeader.setText("Nytt oppdrag ");
-        labelCreateCaseDEquipment.add(labelCreateCaseHeader);
+        panelCreateCase.add(labelCreateCaseHeader);
         labelCreateCaseHeader.setBounds(34, 0, 135, 29);
 
         comboBoxCreateCaseSupervisor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -129,11 +129,11 @@ public class dagsverket extends javax.swing.JFrame {
                 comboBoxCreateCaseSupervisorActionPerformed(evt);
             }
         });
-        labelCreateCaseDEquipment.add(comboBoxCreateCaseSupervisor);
+        panelCreateCase.add(comboBoxCreateCaseSupervisor);
         comboBoxCreateCaseSupervisor.setBounds(289, 57, 96, 27);
 
         labelCreateCaseDEmployer.setText("Kunde:");
-        labelCreateCaseDEquipment.add(labelCreateCaseDEmployer);
+        panelCreateCase.add(labelCreateCaseDEmployer);
         labelCreateCaseDEmployer.setBounds(10, 126, 43, 16);
 
         textFieldCreateCaseEmployer.setToolTipText("");
@@ -143,12 +143,12 @@ public class dagsverket extends javax.swing.JFrame {
                 textFieldCreateCaseEmployerActionPerformed(evt);
             }
         });
-        labelCreateCaseDEquipment.add(textFieldCreateCaseEmployer);
+        panelCreateCase.add(textFieldCreateCaseEmployer);
         textFieldCreateCaseEmployer.setBounds(111, 120, 274, 28);
         textFieldCreateCaseEmployer.getAccessibleContext().setAccessibleName("");
 
         labelCreateCaseDPhone.setText("Telefon:");
-        labelCreateCaseDEquipment.add(labelCreateCaseDPhone);
+        panelCreateCase.add(labelCreateCaseDPhone);
         labelCreateCaseDPhone.setBounds(10, 223, 51, 16);
 
         textFieldCreateCasePhone.addActionListener(new java.awt.event.ActionListener() {
@@ -156,11 +156,11 @@ public class dagsverket extends javax.swing.JFrame {
                 textFieldCreateCasePhoneActionPerformed(evt);
             }
         });
-        labelCreateCaseDEquipment.add(textFieldCreateCasePhone);
+        panelCreateCase.add(textFieldCreateCasePhone);
         textFieldCreateCasePhone.setBounds(111, 217, 270, 28);
 
         labelCreateCaseDAddress.setText("Adresse");
-        labelCreateCaseDEquipment.add(labelCreateCaseDAddress);
+        panelCreateCase.add(labelCreateCaseDAddress);
         labelCreateCaseDAddress.setBounds(10, 155, 50, 16);
 
         textFieldCreateCasePostPlace.setText("updateOnPostnr");
@@ -170,22 +170,22 @@ public class dagsverket extends javax.swing.JFrame {
                 textFieldCreateCasePostPlaceActionPerformed(evt);
             }
         });
-        labelCreateCaseDEquipment.add(textFieldCreateCasePostPlace);
+        panelCreateCase.add(textFieldCreateCasePostPlace);
         textFieldCreateCasePostPlace.setBounds(209, 183, 177, 28);
 
         labelCreateCaseDSupervisorHeader.setText("Utføres av:");
-        labelCreateCaseDEquipment.add(labelCreateCaseDSupervisorHeader);
+        panelCreateCase.add(labelCreateCaseDSupervisorHeader);
         labelCreateCaseDSupervisorHeader.setBounds(247, 35, 68, 16);
 
         textAreaCreateCaseDescription.setColumns(20);
         textAreaCreateCaseDescription.setRows(5);
         jScrollPane1.setViewportView(textAreaCreateCaseDescription);
 
-        labelCreateCaseDEquipment.add(jScrollPane1);
+        panelCreateCase.add(jScrollPane1);
         jScrollPane1.setBounds(112, 439, 350, 160);
 
         labelCreateCaseDDescription.setText("Beskrivelse / Annet:");
-        labelCreateCaseDEquipment.add(labelCreateCaseDDescription);
+        panelCreateCase.add(labelCreateCaseDDescription);
         labelCreateCaseDDescription.setBounds(10, 410, 126, 16);
 
         buttonCreateCaseComplete.setText("Ferdig");
@@ -194,19 +194,19 @@ public class dagsverket extends javax.swing.JFrame {
                 buttonCreateCaseCompleteActionPerformed(evt);
             }
         });
-        labelCreateCaseDEquipment.add(buttonCreateCaseComplete);
+        panelCreateCase.add(buttonCreateCaseComplete);
         buttonCreateCaseComplete.setBounds(660, 550, 260, 50);
 
         labelCreateCaseDStatus.setText("Status:");
-        labelCreateCaseDEquipment.add(labelCreateCaseDStatus);
+        panelCreateCase.add(labelCreateCaseDStatus);
         labelCreateCaseDStatus.setBounds(540, 390, 60, 16);
 
         comboBoxCreateCaseStatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Uferdig", "Aktiv", "Ferdig" }));
-        labelCreateCaseDEquipment.add(comboBoxCreateCaseStatus);
+        panelCreateCase.add(comboBoxCreateCaseStatus);
         comboBoxCreateCaseStatus.setBounds(660, 390, 102, 27);
 
         labelCreateCaseDSubject.setText("Arbeidets art:");
-        labelCreateCaseDEquipment.add(labelCreateCaseDSubject);
+        panelCreateCase.add(labelCreateCaseDSubject);
         labelCreateCaseDSubject.setBounds(10, 307, 85, 16);
 
         textFieldCreateCaseSubject.addActionListener(new java.awt.event.ActionListener() {
@@ -214,11 +214,11 @@ public class dagsverket extends javax.swing.JFrame {
                 textFieldCreateCaseSubjectActionPerformed(evt);
             }
         });
-        labelCreateCaseDEquipment.add(textFieldCreateCaseSubject);
+        panelCreateCase.add(textFieldCreateCaseSubject);
         textFieldCreateCaseSubject.setBounds(111, 301, 275, 28);
 
         labelCreateCaseDInspectDate.setText("Befaring: ");
-        labelCreateCaseDEquipment.add(labelCreateCaseDInspectDate);
+        panelCreateCase.add(labelCreateCaseDInspectDate);
         labelCreateCaseDInspectDate.setBounds(540, 70, 80, 16);
 
         textFieldCreateCaseAddress.setToolTipText("...");
@@ -227,7 +227,7 @@ public class dagsverket extends javax.swing.JFrame {
                 textFieldCreateCaseAddressActionPerformed(evt);
             }
         });
-        labelCreateCaseDEquipment.add(textFieldCreateCaseAddress);
+        panelCreateCase.add(textFieldCreateCaseAddress);
         textFieldCreateCaseAddress.setBounds(111, 149, 274, 28);
 
         textFieldCreateCasePostnr.setToolTipText("...");
@@ -253,7 +253,7 @@ public class dagsverket extends javax.swing.JFrame {
                 textFieldCreateCasePostnrPropertyChange(evt);
             }
         });
-        labelCreateCaseDEquipment.add(textFieldCreateCasePostnr);
+        panelCreateCase.add(textFieldCreateCasePostnr);
         textFieldCreateCasePostnr.setBounds(111, 183, 92, 28);
 
         calCreateCaseInspectDate.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -271,7 +271,7 @@ public class dagsverket extends javax.swing.JFrame {
                 calCreateCaseInspectDatePropertyChange(evt);
             }
         });
-        labelCreateCaseDEquipment.add(calCreateCaseInspectDate);
+        panelCreateCase.add(calCreateCaseInspectDate);
         calCreateCaseInspectDate.setBounds(660, 70, 28, 27);
 
         String[] tider = new String[48];
@@ -298,11 +298,11 @@ public class dagsverket extends javax.swing.JFrame {
                 ComboBoxCreateCaseReqTimeActionPerformed(evt);
             }
         });
-        labelCreateCaseDEquipment.add(ComboBoxCreateCaseReqTime);
+        panelCreateCase.add(ComboBoxCreateCaseReqTime);
         ComboBoxCreateCaseReqTime.setBounds(300, 350, 72, 27);
 
         labelCreateCaseDReqDate.setText("Ønsket oppstart:");
-        labelCreateCaseDEquipment.add(labelCreateCaseDReqDate);
+        panelCreateCase.add(labelCreateCaseDReqDate);
         labelCreateCaseDReqDate.setBounds(10, 353, 106, 16);
 
         calCreateCaseReqDate.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -320,39 +320,39 @@ public class dagsverket extends javax.swing.JFrame {
                 calCreateCaseReqDatePropertyChange(evt);
             }
         });
-        labelCreateCaseDEquipment.add(calCreateCaseReqDate);
+        panelCreateCase.add(calCreateCaseReqDate);
         calCreateCaseReqDate.setBounds(120, 350, 28, 27);
 
         labelCreateCaseDReqTime.setText("Kl.");
-        labelCreateCaseDEquipment.add(labelCreateCaseDReqTime);
+        panelCreateCase.add(labelCreateCaseDReqTime);
         labelCreateCaseDReqTime.setBounds(280, 350, 20, 16);
 
         labelCreateCaseDNameHeader.setText("Mottatt av:");
-        labelCreateCaseDEquipment.add(labelCreateCaseDNameHeader);
+        panelCreateCase.add(labelCreateCaseDNameHeader);
         labelCreateCaseDNameHeader.setBounds(10, 35, 68, 16);
 
         labelCreateCaseDDate.setText("Dato:");
-        labelCreateCaseDEquipment.add(labelCreateCaseDDate);
+        panelCreateCase.add(labelCreateCaseDDate);
         labelCreateCaseDDate.setBounds(10, 90, 34, 16);
 
         labelCreateCaseDName.setText("Navn:");
-        labelCreateCaseDEquipment.add(labelCreateCaseDName);
+        panelCreateCase.add(labelCreateCaseDName);
         labelCreateCaseDName.setBounds(10, 61, 36, 16);
 
         labelCreateCaseName.setText(op.getName());
-        labelCreateCaseDEquipment.add(labelCreateCaseName);
+        panelCreateCase.add(labelCreateCaseName);
         labelCreateCaseName.setBounds(117, 61, 84, 16);
 
         labelCreateCaseDate.setText(dateFormat.format(today.getTime()));
-        labelCreateCaseDEquipment.add(labelCreateCaseDate);
+        panelCreateCase.add(labelCreateCaseDate);
         labelCreateCaseDate.setBounds(117, 90, 84, 16);
 
         labelCreateCaseDSupervisor.setText("Navn:");
-        labelCreateCaseDEquipment.add(labelCreateCaseDSupervisor);
+        panelCreateCase.add(labelCreateCaseDSupervisor);
         labelCreateCaseDSupervisor.setBounds(247, 61, 36, 16);
 
         labelCreateCaseDPrice.setText("Pris:");
-        labelCreateCaseDEquipment.add(labelCreateCaseDPrice);
+        panelCreateCase.add(labelCreateCaseDPrice);
         labelCreateCaseDPrice.setBounds(540, 30, 27, 16);
 
         textFieldCreateCasePrice.addActionListener(new java.awt.event.ActionListener() {
@@ -360,33 +360,33 @@ public class dagsverket extends javax.swing.JFrame {
                 textFieldCreateCasePriceActionPerformed(evt);
             }
         });
-        labelCreateCaseDEquipment.add(textFieldCreateCasePrice);
+        panelCreateCase.add(textFieldCreateCasePrice);
         textFieldCreateCasePrice.setBounds(700, 30, 80, 28);
 
         labelCreateCaseDStartDate.setText("Avtalt oppstart:");
-        labelCreateCaseDEquipment.add(labelCreateCaseDStartDate);
+        panelCreateCase.add(labelCreateCaseDStartDate);
         labelCreateCaseDStartDate.setBounds(540, 120, 98, 16);
 
-        jLabel23.setText("Utstyrsliste:");
-        labelCreateCaseDEquipment.add(jLabel23);
-        jLabel23.setBounds(540, 160, 76, 16);
+        labelCreateCaseDEquipment.setText("Utstyrsliste:");
+        panelCreateCase.add(labelCreateCaseDEquipment);
+        labelCreateCaseDEquipment.setBounds(540, 160, 76, 16);
 
         textAreaCreateCaseEquipment.setColumns(20);
         textAreaCreateCaseEquipment.setRows(5);
         jScrollPane6.setViewportView(textAreaCreateCaseEquipment);
 
-        labelCreateCaseDEquipment.add(jScrollPane6);
+        panelCreateCase.add(jScrollPane6);
         jScrollPane6.setBounds(660, 160, 270, 110);
 
         textAreaCreateCaseContacts.setColumns(20);
         textAreaCreateCaseContacts.setRows(5);
         jScrollPane7.setViewportView(textAreaCreateCaseContacts);
 
-        labelCreateCaseDEquipment.add(jScrollPane7);
+        panelCreateCase.add(jScrollPane7);
         jScrollPane7.setBounds(660, 280, 270, 100);
 
         labelCreateCaseDContacts.setText("Kontaktpersoner:");
-        labelCreateCaseDEquipment.add(labelCreateCaseDContacts);
+        panelCreateCase.add(labelCreateCaseDContacts);
         labelCreateCaseDContacts.setBounds(540, 280, 108, 16);
 
         calCreateCaseStartDate.addActionListener(new java.awt.event.ActionListener() {
@@ -399,44 +399,44 @@ public class dagsverket extends javax.swing.JFrame {
                 calCreateCaseStartDatePropertyChange(evt);
             }
         });
-        labelCreateCaseDEquipment.add(calCreateCaseStartDate);
+        panelCreateCase.add(calCreateCaseStartDate);
         calCreateCaseStartDate.setBounds(660, 110, 30, 27);
-        labelCreateCaseDEquipment.add(labelCreateCaseStartDate);
+        panelCreateCase.add(labelCreateCaseStartDate);
         labelCreateCaseStartDate.setBounds(710, 120, 210, 20);
 
         labelCreateCaseDPostnr.setText("Postnr");
-        labelCreateCaseDEquipment.add(labelCreateCaseDPostnr);
+        panelCreateCase.add(labelCreateCaseDPostnr);
         labelCreateCaseDPostnr.setBounds(10, 190, 40, 16);
-        labelCreateCaseDEquipment.add(labelCreateCaseInspectDate);
+        panelCreateCase.add(labelCreateCaseInspectDate);
         labelCreateCaseInspectDate.setBounds(710, 80, 210, 20);
-        labelCreateCaseDEquipment.add(labelCreateCaseReqDate);
+        panelCreateCase.add(labelCreateCaseReqDate);
         labelCreateCaseReqDate.setBounds(150, 360, 120, 16);
 
-        jTabbedPane3.addTab("+", labelCreateCaseDEquipment);
+        mainTabs.addTab("+", panelCreateCase);
 
         jLabel1.setText("Velkommen til tab 2");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelDraftLayout = new javax.swing.GroupLayout(panelDraft);
+        panelDraft.setLayout(panelDraftLayout);
+        panelDraftLayout.setHorizontalGroup(
+            panelDraftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDraftLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addContainerGap(1016, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        panelDraftLayout.setVerticalGroup(
+            panelDraftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDraftLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addContainerGap(595, Short.MAX_VALUE))
         );
 
-        jTabbedPane3.addTab("Uferdige", jPanel2);
+        mainTabs.addTab("Uferdige", panelDraft);
 
-        jTable3.setAutoCreateRowSorter(true);
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        tableActive.setAutoCreateRowSorter(true);
+        tableActive.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -447,55 +447,55 @@ public class dagsverket extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane5.setViewportView(jTable3);
+        jScrollPane5.setViewportView(tableActive);
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelActiveTableLayout = new javax.swing.GroupLayout(panelActiveTable);
+        panelActiveTable.setLayout(panelActiveTableLayout);
+        panelActiveTableLayout.setHorizontalGroup(
+            panelActiveTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1122, Short.MAX_VALUE)
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        panelActiveTableLayout.setVerticalGroup(
+            panelActiveTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelActiveTableLayout.createSequentialGroup()
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 139, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Tabell", jPanel5);
+        activeTabs.addTab("Tabell", panelActiveTable);
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelActiveCalLayout = new javax.swing.GroupLayout(panelActiveCal);
+        panelActiveCal.setLayout(panelActiveCalLayout);
+        panelActiveCalLayout.setHorizontalGroup(
+            panelActiveCalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelActiveCalLayout.setVerticalGroup(
+            panelActiveCalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Kalender", jPanel6);
+        activeTabs.addTab("Kalender", panelActiveCal);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelActiveMainLayout = new javax.swing.GroupLayout(panelActiveMain);
+        panelActiveMain.setLayout(panelActiveMainLayout);
+        panelActiveMainLayout.setHorizontalGroup(
+            panelActiveMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelActiveMainLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1))
+                .addComponent(activeTabs))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        panelActiveMainLayout.setVerticalGroup(
+            panelActiveMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelActiveMainLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
+                .addComponent(activeTabs)
                 .addContainerGap())
         );
 
-        jTabbedPane3.addTab("Aktiv", jPanel3);
+        mainTabs.addTab("Aktiv", panelActiveMain);
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tableHistory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -506,44 +506,44 @@ public class dagsverket extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane4.setViewportView(jTable2);
+        jScrollPane4.setViewportView(tableHistory);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelHistoryLayout = new javax.swing.GroupLayout(panelHistory);
+        panelHistory.setLayout(panelHistoryLayout);
+        panelHistoryLayout.setHorizontalGroup(
+            panelHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1149, Short.MAX_VALUE)
-            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel4Layout.createSequentialGroup()
+            .addGroup(panelHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelHistoryLayout.createSequentialGroup()
                     .addGap(27, 27, 27)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(432, Short.MAX_VALUE)))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelHistoryLayout.setVerticalGroup(
+            panelHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 617, Short.MAX_VALUE)
-            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel4Layout.createSequentialGroup()
+            .addGroup(panelHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelHistoryLayout.createSequentialGroup()
                     .addGap(29, 29, 29)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(150, Short.MAX_VALUE)))
         );
 
-        jTabbedPane3.addTab("Ferdig", jPanel4);
+        mainTabs.addTab("Ferdig", panelHistory);
 
-        jButton3.setText("Ny person");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        buttonAttendanceNewPerson.setText("Ny person");
+        buttonAttendanceNewPerson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                buttonAttendanceNewPersonActionPerformed(evt);
             }
         });
 
-        jButton4.setText("->");
+        buttonAttendanceMoveRight.setText("->");
 
-        jButton5.setText("<-");
+        buttonAttendanceMoveLeft.setText("<-");
 
-        jTable1.setAutoCreateRowSorter(true);
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tableAttendanceShown.setAutoCreateRowSorter(true);
+        tableAttendanceShown.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -554,17 +554,17 @@ public class dagsverket extends javax.swing.JFrame {
                 "Fornavn", "Etternavn", "Oppmøter", "Sist jobbdato", ""
             }
         ));
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane2.setViewportView(tableAttendanceShown);
 
-        jButton6.setText("Historikk");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        buttonAttendanceHistory.setText("Historikk");
+        buttonAttendanceHistory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                buttonAttendanceHistoryActionPerformed(evt);
             }
         });
 
-        jTable4.setAutoCreateRowSorter(true);
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        tableAttendanceNotShown.setAutoCreateRowSorter(true);
+        tableAttendanceNotShown.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -572,52 +572,52 @@ public class dagsverket extends javax.swing.JFrame {
                 "Fornavn", "Etternavn"
             }
         ));
-        jScrollPane3.setViewportView(jTable4);
+        jScrollPane3.setViewportView(tableAttendanceNotShown);
 
-        jToggleButton1.setText("Testdata");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        testDataButton.setText("Testdata");
+        testDataButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                testDataButtonActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelAttendanceLayout = new javax.swing.GroupLayout(panelAttendance);
+        panelAttendance.setLayout(panelAttendanceLayout);
+        panelAttendanceLayout.setHorizontalGroup(
+            panelAttendanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAttendanceLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton6)
-                        .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelAttendanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelAttendanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(buttonAttendanceNewPerson, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonAttendanceHistory)
+                        .addComponent(buttonAttendanceMoveLeft, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonAttendanceMoveRight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(testDataButton, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
+        panelAttendanceLayout.setVerticalGroup(
+            panelAttendanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelAttendanceLayout.createSequentialGroup()
+                .addGroup(panelAttendanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelAttendanceLayout.createSequentialGroup()
+                        .addGroup(panelAttendanceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelAttendanceLayout.createSequentialGroup()
                                 .addGap(202, 202, 202)
-                                .addComponent(jButton4)
+                                .addComponent(buttonAttendanceMoveRight)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton5)
+                                .addComponent(buttonAttendanceMoveLeft)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton3)
+                                .addComponent(buttonAttendanceNewPerson)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton6)
+                                .addComponent(buttonAttendanceHistory)
                                 .addGap(18, 18, 18)
-                                .addComponent(jToggleButton1))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(testDataButton))
+                            .addGroup(panelAttendanceLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 53, Short.MAX_VALUE))
@@ -625,39 +625,39 @@ public class dagsverket extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane3.addTab("Oppmøte", jPanel7);
+        mainTabs.addTab("Oppmøte", panelAttendance);
 
-        jToggleButton2.setText("Logout");
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        logoutButton.setText("Logout");
+        logoutButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                logoutButtonActionPerformed(evt);
             }
         });
 
-        jLabel4.setText("Bruker: "+op.getName());
+        labelMainUsername.setText("Bruker: "+op.getName());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jTabbedPane3)
+                .addComponent(mainTabs)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jToggleButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(logoutButton, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
+                    .addComponent(labelMainUsername, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane3)
+                    .addComponent(mainTabs)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(3, 3, 3)
-                        .addComponent(jToggleButton2)
+                        .addComponent(logoutButton)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelMainUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -665,19 +665,19 @@ public class dagsverket extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+    private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
         int reply = showConfirmDialog(null, "Er du sikker på at du vil logge ut?", "confirm", YES_NO_OPTION);
                 if (reply == YES_OPTION){
                     this.dispose();
                     Login.main(null);                   
                 } 
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
+    }//GEN-LAST:event_logoutButtonActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void buttonAttendanceHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAttendanceHistoryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_buttonAttendanceHistoryActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void buttonAttendanceNewPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAttendanceNewPersonActionPerformed
       JTextField xField = new JTextField(5);
       JTextField yField = new JTextField(5);
 
@@ -692,13 +692,13 @@ public class dagsverket extends javax.swing.JFrame {
                "Skriv inn fornavn og etternavn", JOptionPane.OK_CANCEL_OPTION);
       if (result == JOptionPane.OK_OPTION) {
          op.addEmployee(xField.getText(), yField.getText());
-         op.updateEmployeeListLeft(jTable4);
+         op.updateEmployeeListLeft(tableAttendanceNotShown);
       }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_buttonAttendanceNewPersonActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        op.fyllTabellTest(jTable3);
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    private void testDataButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testDataButtonActionPerformed
+        op.fyllTabellTest(tableActive);
+    }//GEN-LAST:event_testDataButtonActionPerformed
 
     private void calCreateCaseReqDatePropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_calCreateCaseReqDatePropertyChange
         if (evt.getNewValue() instanceof Date){
@@ -755,7 +755,6 @@ public class dagsverket extends javax.swing.JFrame {
     private void buttonCreateCaseCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCreateCaseCompleteActionPerformed
         labelCreateCaseDEmployer.setForeground(Color.black);
         labelCreateCaseDPhone.setForeground(Color.black);
-        labelCreateCaseDStartDate.setForeground(Color.black);
         labelCreateCaseDSubject.setForeground(Color.black);
         String contractor = textFieldCreateCaseEmployer.getText();
         int postnummer = 0;
@@ -800,6 +799,7 @@ public class dagsverket extends javax.swing.JFrame {
 
         if(create_errors == null){
             System.out.println("hei");
+            // MOVE TO OTHER TAB ?
         }
         else{
             System.out.println(create_errors);
@@ -809,7 +809,6 @@ public class dagsverket extends javax.swing.JFrame {
                 }
                 if(create_errors.get(i)==2){
                     labelCreateCaseDPhone.setForeground(Color.red);
-                    labelCreateCaseDStartDate.setForeground(Color.red);
                 }
                 if(create_errors.get(i)==3){
                     labelCreateCaseDSubject.setForeground(Color.red);
@@ -913,25 +912,18 @@ public class dagsverket extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox ComboBoxCreateCaseReqTime;
+    private javax.swing.JTabbedPane activeTabs;
+    private javax.swing.JButton buttonAttendanceHistory;
+    private javax.swing.JButton buttonAttendanceMoveLeft;
+    private javax.swing.JButton buttonAttendanceMoveRight;
+    private javax.swing.JButton buttonAttendanceNewPerson;
     private javax.swing.JButton buttonCreateCaseComplete;
     private net.sourceforge.jcalendarbutton.JCalendarButton calCreateCaseInspectDate;
     private net.sourceforge.jcalendarbutton.JCalendarButton calCreateCaseReqDate;
     private net.sourceforge.jcalendarbutton.JCalendarButton calCreateCaseStartDate;
     private javax.swing.JComboBox comboBoxCreateCaseStatus;
     private javax.swing.JComboBox comboBoxCreateCaseSupervisor;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -940,20 +932,12 @@ public class dagsverket extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JLabel labelCreateCaseDAddress;
     private javax.swing.JLabel labelCreateCaseDContacts;
     private javax.swing.JLabel labelCreateCaseDDate;
     private javax.swing.JLabel labelCreateCaseDDescription;
     private javax.swing.JLabel labelCreateCaseDEmployer;
-    private javax.swing.JPanel labelCreateCaseDEquipment;
+    private javax.swing.JLabel labelCreateCaseDEquipment;
     private javax.swing.JLabel labelCreateCaseDInspectDate;
     private javax.swing.JLabel labelCreateCaseDName;
     private javax.swing.JLabel labelCreateCaseDNameHeader;
@@ -973,6 +957,21 @@ public class dagsverket extends javax.swing.JFrame {
     private javax.swing.JLabel labelCreateCaseName;
     private javax.swing.JLabel labelCreateCaseReqDate;
     private javax.swing.JLabel labelCreateCaseStartDate;
+    private javax.swing.JLabel labelMainUsername;
+    private javax.swing.JToggleButton logoutButton;
+    private javax.swing.JTabbedPane mainTabs;
+    private javax.swing.JPanel panelActiveCal;
+    private javax.swing.JPanel panelActiveMain;
+    private javax.swing.JPanel panelActiveTable;
+    private javax.swing.JPanel panelAttendance;
+    private javax.swing.JPanel panelCreateCase;
+    private javax.swing.JPanel panelDraft;
+    private javax.swing.JPanel panelHistory;
+    private javax.swing.JTable tableActive;
+    private javax.swing.JTable tableAttendanceNotShown;
+    private javax.swing.JTable tableAttendanceShown;
+    private javax.swing.JTable tableHistory;
+    private javax.swing.JToggleButton testDataButton;
     private javax.swing.JTextArea textAreaCreateCaseContacts;
     private javax.swing.JTextArea textAreaCreateCaseDescription;
     private javax.swing.JTextArea textAreaCreateCaseEquipment;

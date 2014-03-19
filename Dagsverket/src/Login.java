@@ -34,37 +34,37 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        buttonLogin = new javax.swing.JButton();
+        labelChooseUser = new javax.swing.JLabel();
+        buttonNewUser = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList();
+        listUsernames = new javax.swing.JList();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Login");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonLogin.setText("Login");
+        buttonLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                buttonLoginActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Velg bruker:");
+        labelChooseUser.setText("Velg bruker:");
 
-        jButton2.setText("Ny bruker");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        buttonNewUser.setText("Ny bruker");
+        buttonNewUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                buttonNewUserActionPerformed(evt);
             }
         });
 
-        jList2.setModel(new javax.swing.AbstractListModel() {
+        listUsernames.setModel(new javax.swing.AbstractListModel() {
             String[] strings = users.updateUsernames();
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        jList2.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jScrollPane2.setViewportView(jList2);
+        listUsernames.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jScrollPane2.setViewportView(listUsernames);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,9 +74,9 @@ public class Login extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel1)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE))
+                        .addComponent(labelChooseUser)
+                        .addComponent(buttonLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buttonNewUser, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -84,36 +84,36 @@ public class Login extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jLabel1)
+                .addComponent(labelChooseUser)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(7, 7, 7)
-                .addComponent(jButton1)
+                .addComponent(buttonLogin)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(buttonNewUser)
                 .addContainerGap(44, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
         
         // TODO Bytt ut null med lastet brukernavn  
         // TODO Add try catch
         String selected = "";
-        selected = jList2.getSelectedValue().toString();
+        selected = listUsernames.getSelectedValue().toString();
         String[] navn = {selected};
         this.dispose();
         dagsverket.main(navn);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_buttonLoginActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void buttonNewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNewUserActionPerformed
         String nyBruker = javax.swing.JOptionPane.showInputDialog("Skriv inn navn på ny bruker");
         users.createUser(nyBruker);
-        jList2.setListData(users.updateUsernames());
-        jList2.updateUI();
-    }//GEN-LAST:event_jButton2ActionPerformed
+        listUsernames.setListData(users.updateUsernames());
+        listUsernames.updateUI();
+    }//GEN-LAST:event_buttonNewUserActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,10 +151,10 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JList jList2;
+    private javax.swing.JButton buttonLogin;
+    private javax.swing.JButton buttonNewUser;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel labelChooseUser;
+    private javax.swing.JList listUsernames;
     // End of variables declaration//GEN-END:variables
 }
