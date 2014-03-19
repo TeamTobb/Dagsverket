@@ -42,52 +42,52 @@ public class dagsverket extends javax.swing.JFrame {
 
         jPopupMenu1 = new javax.swing.JPopupMenu();
         jTabbedPane3 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        nEventHeaderLabel = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        labelCreateCaseDEquipment = new javax.swing.JPanel();
+        labelCreateCaseHeader = new javax.swing.JLabel();
+        comboBoxCreateCaseSupervisor = new javax.swing.JComboBox();
+        labelCreateCaseDEmployer = new javax.swing.JLabel();
+        textFieldCreateCaseEmployer = new javax.swing.JTextField();
+        labelCreateCaseDPhone = new javax.swing.JLabel();
+        textFieldCreateCasePhone = new javax.swing.JTextField();
+        labelCreateCaseDAddress = new javax.swing.JLabel();
+        textFieldCreateCasePostPlace = new javax.swing.JTextField();
+        labelCreateCaseDSupervisorHeader = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel9 = new javax.swing.JLabel();
-        FerdigButton = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox();
-        jLabel13 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jCalendarButton2 = new net.sourceforge.jcalendarbutton.JCalendarButton();
-        jComboBox3 = new javax.swing.JComboBox();
-        jLabel3 = new javax.swing.JLabel();
-        jCalendarButton3 = new net.sourceforge.jcalendarbutton.JCalendarButton();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
+        textAreaCreateCaseDescription = new javax.swing.JTextArea();
+        labelCreateCaseDDescription = new javax.swing.JLabel();
+        buttonCreateCaseComplete = new javax.swing.JButton();
+        labelCreateCaseDStatus = new javax.swing.JLabel();
+        comboBoxCreateCaseStatus = new javax.swing.JComboBox();
+        labelCreateCaseDSubject = new javax.swing.JLabel();
+        textFieldCreateCaseSubject = new javax.swing.JTextField();
+        labelCreateCaseDInspectDate = new javax.swing.JLabel();
+        textFieldCreateCaseAddress = new javax.swing.JTextField();
+        textFieldCreateCasePostnr = new javax.swing.JTextField();
+        calCreateCaseInspectDate = new net.sourceforge.jcalendarbutton.JCalendarButton();
+        ComboBoxCreateCaseReqTime = new javax.swing.JComboBox();
+        labelCreateCaseDReqDate = new javax.swing.JLabel();
+        calCreateCaseReqDate = new net.sourceforge.jcalendarbutton.JCalendarButton();
+        labelCreateCaseDReqTime = new javax.swing.JLabel();
+        labelCreateCaseDNameHeader = new javax.swing.JLabel();
+        labelCreateCaseDDate = new javax.swing.JLabel();
+        labelCreateCaseDName = new javax.swing.JLabel();
+        labelCreateCaseName = new javax.swing.JLabel();
+        labelCreateCaseDate = new javax.swing.JLabel();
+        labelCreateCaseDSupervisor = new javax.swing.JLabel();
+        labelCreateCaseDPrice = new javax.swing.JLabel();
+        textFieldCreateCasePrice = new javax.swing.JTextField();
+        labelCreateCaseDStartDate = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        textAreaCreateCaseEquipment = new javax.swing.JTextArea();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
-        jLabel24 = new javax.swing.JLabel();
-        jCalendarButton1 = new net.sourceforge.jcalendarbutton.JCalendarButton();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
+        textAreaCreateCaseContacts = new javax.swing.JTextArea();
+        labelCreateCaseDContacts = new javax.swing.JLabel();
+        calCreateCaseStartDate = new net.sourceforge.jcalendarbutton.JCalendarButton();
+        labelCreateCaseStartDate = new javax.swing.JLabel();
+        labelCreateCaseDPostnr = new javax.swing.JLabel();
+        labelCreateCaseInspectDate = new javax.swing.JLabel();
+        labelCreateCaseReqDate = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
@@ -114,163 +114,165 @@ public class dagsverket extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setLayout(null);
+        labelCreateCaseDEquipment.setBackground(new java.awt.Color(255, 51, 51));
+        labelCreateCaseDEquipment.setForeground(new java.awt.Color(255, 51, 0));
+        labelCreateCaseDEquipment.setLayout(null);
 
-        nEventHeaderLabel.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        nEventHeaderLabel.setText("Nytt oppdrag ");
-        jPanel1.add(nEventHeaderLabel);
-        nEventHeaderLabel.setBounds(34, 0, 135, 29);
+        labelCreateCaseHeader.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        labelCreateCaseHeader.setText("Nytt oppdrag ");
+        labelCreateCaseDEquipment.add(labelCreateCaseHeader);
+        labelCreateCaseHeader.setBounds(34, 0, 135, 29);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        comboBoxCreateCaseSupervisor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboBoxCreateCaseSupervisor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                comboBoxCreateCaseSupervisorActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox1);
-        jComboBox1.setBounds(289, 57, 96, 27);
+        labelCreateCaseDEquipment.add(comboBoxCreateCaseSupervisor);
+        comboBoxCreateCaseSupervisor.setBounds(289, 57, 96, 27);
 
-        jLabel5.setText("Kunde:");
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(10, 126, 43, 16);
+        labelCreateCaseDEmployer.setText("Kunde:");
+        labelCreateCaseDEquipment.add(labelCreateCaseDEmployer);
+        labelCreateCaseDEmployer.setBounds(10, 126, 43, 16);
 
-        jTextField1.setToolTipText("");
-        jTextField1.setVerifyInputWhenFocusTarget(false);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        textFieldCreateCaseEmployer.setToolTipText("");
+        textFieldCreateCaseEmployer.setVerifyInputWhenFocusTarget(false);
+        textFieldCreateCaseEmployer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                textFieldCreateCaseEmployerActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(111, 120, 274, 28);
-        jTextField1.getAccessibleContext().setAccessibleName("");
+        labelCreateCaseDEquipment.add(textFieldCreateCaseEmployer);
+        textFieldCreateCaseEmployer.setBounds(111, 120, 274, 28);
+        textFieldCreateCaseEmployer.getAccessibleContext().setAccessibleName("");
 
-        jLabel6.setText("Telefon:");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(10, 223, 51, 16);
+        labelCreateCaseDPhone.setText("Telefon:");
+        labelCreateCaseDEquipment.add(labelCreateCaseDPhone);
+        labelCreateCaseDPhone.setBounds(10, 223, 51, 16);
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        textFieldCreateCasePhone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                textFieldCreateCasePhoneActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(111, 217, 270, 28);
+        labelCreateCaseDEquipment.add(textFieldCreateCasePhone);
+        textFieldCreateCasePhone.setBounds(111, 217, 270, 28);
 
-        jLabel7.setText("Adresse");
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(10, 155, 50, 16);
+        labelCreateCaseDAddress.setText("Adresse");
+        labelCreateCaseDEquipment.add(labelCreateCaseDAddress);
+        labelCreateCaseDAddress.setBounds(10, 155, 50, 16);
 
-        jTextField3.setText("updateOnPostnr");
-        jTextField3.setToolTipText("...");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        textFieldCreateCasePostPlace.setText("updateOnPostnr");
+        textFieldCreateCasePostPlace.setToolTipText("...");
+        textFieldCreateCasePostPlace.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                textFieldCreateCasePostPlaceActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField3);
-        jTextField3.setBounds(209, 183, 177, 28);
+        labelCreateCaseDEquipment.add(textFieldCreateCasePostPlace);
+        textFieldCreateCasePostPlace.setBounds(209, 183, 177, 28);
 
-        jLabel8.setText("Utføres av:");
-        jPanel1.add(jLabel8);
-        jLabel8.setBounds(247, 35, 68, 16);
+        labelCreateCaseDSupervisorHeader.setText("Utføres av:");
+        labelCreateCaseDEquipment.add(labelCreateCaseDSupervisorHeader);
+        labelCreateCaseDSupervisorHeader.setBounds(247, 35, 68, 16);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        textAreaCreateCaseDescription.setColumns(20);
+        textAreaCreateCaseDescription.setRows(5);
+        jScrollPane1.setViewportView(textAreaCreateCaseDescription);
 
-        jPanel1.add(jScrollPane1);
+        labelCreateCaseDEquipment.add(jScrollPane1);
         jScrollPane1.setBounds(112, 439, 350, 160);
 
-        jLabel9.setText("Beskrivelse / Annet:");
-        jPanel1.add(jLabel9);
-        jLabel9.setBounds(10, 410, 126, 16);
+        labelCreateCaseDDescription.setText("Beskrivelse / Annet:");
+        labelCreateCaseDEquipment.add(labelCreateCaseDDescription);
+        labelCreateCaseDDescription.setBounds(10, 410, 126, 16);
 
-        FerdigButton.setText("Ferdig");
-        FerdigButton.addActionListener(new java.awt.event.ActionListener() {
+        buttonCreateCaseComplete.setText("Ferdig");
+        buttonCreateCaseComplete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FerdigButtonActionPerformed(evt);
+                buttonCreateCaseCompleteActionPerformed(evt);
             }
         });
-        jPanel1.add(FerdigButton);
-        FerdigButton.setBounds(660, 550, 260, 50);
+        labelCreateCaseDEquipment.add(buttonCreateCaseComplete);
+        buttonCreateCaseComplete.setBounds(660, 550, 260, 50);
 
-        jLabel10.setText("Status:");
-        jPanel1.add(jLabel10);
-        jLabel10.setBounds(540, 390, 60, 16);
+        labelCreateCaseDStatus.setText("Status:");
+        labelCreateCaseDEquipment.add(labelCreateCaseDStatus);
+        labelCreateCaseDStatus.setBounds(540, 390, 60, 16);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Uferdig", "Aktiv", "Ferdig" }));
-        jPanel1.add(jComboBox2);
-        jComboBox2.setBounds(660, 390, 102, 27);
+        comboBoxCreateCaseStatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Uferdig", "Aktiv", "Ferdig" }));
+        labelCreateCaseDEquipment.add(comboBoxCreateCaseStatus);
+        comboBoxCreateCaseStatus.setBounds(660, 390, 102, 27);
 
-        jLabel13.setText("Arbeidets art:");
-        jPanel1.add(jLabel13);
-        jLabel13.setBounds(10, 307, 85, 16);
+        labelCreateCaseDSubject.setText("Arbeidets art:");
+        labelCreateCaseDEquipment.add(labelCreateCaseDSubject);
+        labelCreateCaseDSubject.setBounds(10, 307, 85, 16);
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        textFieldCreateCaseSubject.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                textFieldCreateCaseSubjectActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField5);
-        jTextField5.setBounds(111, 301, 275, 28);
+        labelCreateCaseDEquipment.add(textFieldCreateCaseSubject);
+        textFieldCreateCaseSubject.setBounds(111, 301, 275, 28);
 
-        jLabel14.setText("Befaring: ");
-        jPanel1.add(jLabel14);
-        jLabel14.setBounds(540, 70, 80, 16);
+        labelCreateCaseDInspectDate.setText("Befaring: ");
+        labelCreateCaseDEquipment.add(labelCreateCaseDInspectDate);
+        labelCreateCaseDInspectDate.setBounds(540, 70, 80, 16);
 
-        jTextField6.setToolTipText("...");
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        textFieldCreateCaseAddress.setToolTipText("...");
+        textFieldCreateCaseAddress.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                textFieldCreateCaseAddressActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField6);
-        jTextField6.setBounds(111, 149, 274, 28);
+        labelCreateCaseDEquipment.add(textFieldCreateCaseAddress);
+        textFieldCreateCaseAddress.setBounds(111, 149, 274, 28);
 
-        jTextField7.setToolTipText("...");
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        textFieldCreateCasePostnr.setToolTipText("...");
+        textFieldCreateCasePostnr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                textFieldCreateCasePostnrActionPerformed(evt);
             }
         });
-        jTextField7.addFocusListener(new java.awt.event.FocusAdapter() {
+        textFieldCreateCasePostnr.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                jTextField7FocusLost(evt);
+                textFieldCreateCasePostnrFocusLost(evt);
             }
         });
-        jTextField7.addInputMethodListener(new java.awt.event.InputMethodListener() {
+        textFieldCreateCasePostnr.addInputMethodListener(new java.awt.event.InputMethodListener() {
             public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
-                jTextField7InputMethodTextChanged(evt);
+                textFieldCreateCasePostnrInputMethodTextChanged(evt);
             }
             public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
             }
         });
-        jTextField7.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        textFieldCreateCasePostnr.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                jTextField7PropertyChange(evt);
+                textFieldCreateCasePostnrPropertyChange(evt);
             }
         });
-        jPanel1.add(jTextField7);
-        jTextField7.setBounds(111, 183, 92, 28);
+        labelCreateCaseDEquipment.add(textFieldCreateCasePostnr);
+        textFieldCreateCasePostnr.setBounds(111, 183, 92, 28);
 
-        jCalendarButton2.addChangeListener(new javax.swing.event.ChangeListener() {
+        calCreateCaseInspectDate.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jCalendarButton2StateChanged(evt);
+                calCreateCaseInspectDateStateChanged(evt);
             }
         });
-        jCalendarButton2.addActionListener(new java.awt.event.ActionListener() {
+        calCreateCaseInspectDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCalendarButton2ActionPerformed(evt);
+                calCreateCaseInspectDateActionPerformed(evt);
             }
         });
-        jCalendarButton2.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        calCreateCaseInspectDate.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                jCalendarButton2PropertyChange(evt);
+                calCreateCaseInspectDatePropertyChange(evt);
             }
         });
-        jPanel1.add(jCalendarButton2);
-        jCalendarButton2.setBounds(660, 70, 28, 27);
+        labelCreateCaseDEquipment.add(calCreateCaseInspectDate);
+        calCreateCaseInspectDate.setBounds(660, 70, 28, 27);
 
         String[] tider = new String[48];
         int teller = 0;
@@ -290,127 +292,127 @@ public class dagsverket extends javax.swing.JFrame {
                 teller++;
             }
         }
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(tider));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+        ComboBoxCreateCaseReqTime.setModel(new javax.swing.DefaultComboBoxModel(tider));
+        ComboBoxCreateCaseReqTime.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
+                ComboBoxCreateCaseReqTimeActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox3);
-        jComboBox3.setBounds(300, 350, 72, 27);
+        labelCreateCaseDEquipment.add(ComboBoxCreateCaseReqTime);
+        ComboBoxCreateCaseReqTime.setBounds(300, 350, 72, 27);
 
-        jLabel3.setText("Ønsket oppstart:");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(10, 353, 106, 16);
+        labelCreateCaseDReqDate.setText("Ønsket oppstart:");
+        labelCreateCaseDEquipment.add(labelCreateCaseDReqDate);
+        labelCreateCaseDReqDate.setBounds(10, 353, 106, 16);
 
-        jCalendarButton3.addChangeListener(new javax.swing.event.ChangeListener() {
+        calCreateCaseReqDate.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jCalendarButton3StateChanged(evt);
+                calCreateCaseReqDateStateChanged(evt);
             }
         });
-        jCalendarButton3.addActionListener(new java.awt.event.ActionListener() {
+        calCreateCaseReqDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCalendarButton3ActionPerformed(evt);
+                calCreateCaseReqDateActionPerformed(evt);
             }
         });
-        jCalendarButton3.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        calCreateCaseReqDate.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                jCalendarButton3PropertyChange(evt);
+                calCreateCaseReqDatePropertyChange(evt);
             }
         });
-        jPanel1.add(jCalendarButton3);
-        jCalendarButton3.setBounds(120, 350, 28, 27);
+        labelCreateCaseDEquipment.add(calCreateCaseReqDate);
+        calCreateCaseReqDate.setBounds(120, 350, 28, 27);
 
-        jLabel12.setText("Kl.");
-        jPanel1.add(jLabel12);
-        jLabel12.setBounds(280, 350, 20, 16);
+        labelCreateCaseDReqTime.setText("Kl.");
+        labelCreateCaseDEquipment.add(labelCreateCaseDReqTime);
+        labelCreateCaseDReqTime.setBounds(280, 350, 20, 16);
 
-        jLabel15.setText("Mottatt av:");
-        jPanel1.add(jLabel15);
-        jLabel15.setBounds(10, 35, 68, 16);
+        labelCreateCaseDNameHeader.setText("Mottatt av:");
+        labelCreateCaseDEquipment.add(labelCreateCaseDNameHeader);
+        labelCreateCaseDNameHeader.setBounds(10, 35, 68, 16);
 
-        jLabel18.setText("Dato:");
-        jPanel1.add(jLabel18);
-        jLabel18.setBounds(10, 90, 34, 16);
+        labelCreateCaseDDate.setText("Dato:");
+        labelCreateCaseDEquipment.add(labelCreateCaseDDate);
+        labelCreateCaseDDate.setBounds(10, 90, 34, 16);
 
-        jLabel19.setText("Navn:");
-        jPanel1.add(jLabel19);
-        jLabel19.setBounds(10, 61, 36, 16);
+        labelCreateCaseDName.setText("Navn:");
+        labelCreateCaseDEquipment.add(labelCreateCaseDName);
+        labelCreateCaseDName.setBounds(10, 61, 36, 16);
 
-        jLabel20.setText(op.getName());
-        jPanel1.add(jLabel20);
-        jLabel20.setBounds(117, 61, 84, 16);
+        labelCreateCaseName.setText(op.getName());
+        labelCreateCaseDEquipment.add(labelCreateCaseName);
+        labelCreateCaseName.setBounds(117, 61, 84, 16);
 
-        jLabel21.setText(dateFormat.format(today.getTime()));
-        jPanel1.add(jLabel21);
-        jLabel21.setBounds(117, 90, 84, 16);
+        labelCreateCaseDate.setText(dateFormat.format(today.getTime()));
+        labelCreateCaseDEquipment.add(labelCreateCaseDate);
+        labelCreateCaseDate.setBounds(117, 90, 84, 16);
 
-        jLabel22.setText("Navn:");
-        jPanel1.add(jLabel22);
-        jLabel22.setBounds(247, 61, 36, 16);
+        labelCreateCaseDSupervisor.setText("Navn:");
+        labelCreateCaseDEquipment.add(labelCreateCaseDSupervisor);
+        labelCreateCaseDSupervisor.setBounds(247, 61, 36, 16);
 
-        jLabel11.setText("Pris:");
-        jPanel1.add(jLabel11);
-        jLabel11.setBounds(540, 30, 27, 16);
+        labelCreateCaseDPrice.setText("Pris:");
+        labelCreateCaseDEquipment.add(labelCreateCaseDPrice);
+        labelCreateCaseDPrice.setBounds(540, 30, 27, 16);
 
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        textFieldCreateCasePrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                textFieldCreateCasePriceActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField8);
-        jTextField8.setBounds(700, 30, 80, 28);
+        labelCreateCaseDEquipment.add(textFieldCreateCasePrice);
+        textFieldCreateCasePrice.setBounds(700, 30, 80, 28);
 
-        jLabel16.setText("Avtalt oppstart:");
-        jPanel1.add(jLabel16);
-        jLabel16.setBounds(540, 120, 98, 16);
+        labelCreateCaseDStartDate.setText("Avtalt oppstart:");
+        labelCreateCaseDEquipment.add(labelCreateCaseDStartDate);
+        labelCreateCaseDStartDate.setBounds(540, 120, 98, 16);
 
         jLabel23.setText("Utstyrsliste:");
-        jPanel1.add(jLabel23);
+        labelCreateCaseDEquipment.add(jLabel23);
         jLabel23.setBounds(540, 160, 76, 16);
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane6.setViewportView(jTextArea2);
+        textAreaCreateCaseEquipment.setColumns(20);
+        textAreaCreateCaseEquipment.setRows(5);
+        jScrollPane6.setViewportView(textAreaCreateCaseEquipment);
 
-        jPanel1.add(jScrollPane6);
+        labelCreateCaseDEquipment.add(jScrollPane6);
         jScrollPane6.setBounds(660, 160, 270, 110);
 
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane7.setViewportView(jTextArea3);
+        textAreaCreateCaseContacts.setColumns(20);
+        textAreaCreateCaseContacts.setRows(5);
+        jScrollPane7.setViewportView(textAreaCreateCaseContacts);
 
-        jPanel1.add(jScrollPane7);
+        labelCreateCaseDEquipment.add(jScrollPane7);
         jScrollPane7.setBounds(660, 280, 270, 100);
 
-        jLabel24.setText("Kontaktpersoner:");
-        jPanel1.add(jLabel24);
-        jLabel24.setBounds(540, 280, 108, 16);
+        labelCreateCaseDContacts.setText("Kontaktpersoner:");
+        labelCreateCaseDEquipment.add(labelCreateCaseDContacts);
+        labelCreateCaseDContacts.setBounds(540, 280, 108, 16);
 
-        jCalendarButton1.addActionListener(new java.awt.event.ActionListener() {
+        calCreateCaseStartDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCalendarButton1ActionPerformed(evt);
+                calCreateCaseStartDateActionPerformed(evt);
             }
         });
-        jCalendarButton1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        calCreateCaseStartDate.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                jCalendarButton1PropertyChange(evt);
+                calCreateCaseStartDatePropertyChange(evt);
             }
         });
-        jPanel1.add(jCalendarButton1);
-        jCalendarButton1.setBounds(660, 110, 30, 27);
-        jPanel1.add(jLabel17);
-        jLabel17.setBounds(710, 120, 210, 20);
+        labelCreateCaseDEquipment.add(calCreateCaseStartDate);
+        calCreateCaseStartDate.setBounds(660, 110, 30, 27);
+        labelCreateCaseDEquipment.add(labelCreateCaseStartDate);
+        labelCreateCaseStartDate.setBounds(710, 120, 210, 20);
 
-        jLabel25.setText("Postnr");
-        jPanel1.add(jLabel25);
-        jLabel25.setBounds(10, 190, 40, 16);
-        jPanel1.add(jLabel26);
-        jLabel26.setBounds(710, 80, 210, 20);
-        jPanel1.add(jLabel27);
-        jLabel27.setBounds(150, 360, 120, 16);
+        labelCreateCaseDPostnr.setText("Postnr");
+        labelCreateCaseDEquipment.add(labelCreateCaseDPostnr);
+        labelCreateCaseDPostnr.setBounds(10, 190, 40, 16);
+        labelCreateCaseDEquipment.add(labelCreateCaseInspectDate);
+        labelCreateCaseInspectDate.setBounds(710, 80, 210, 20);
+        labelCreateCaseDEquipment.add(labelCreateCaseReqDate);
+        labelCreateCaseReqDate.setBounds(150, 360, 120, 16);
 
-        jTabbedPane3.addTab("+", jPanel1);
+        jTabbedPane3.addTab("+", labelCreateCaseDEquipment);
 
         jLabel1.setText("Velkommen til tab 2");
 
@@ -698,85 +700,85 @@ public class dagsverket extends javax.swing.JFrame {
         op.fyllTabellTest(jTable3);
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
-    private void jCalendarButton3PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jCalendarButton3PropertyChange
+    private void calCreateCaseReqDatePropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_calCreateCaseReqDatePropertyChange
         if (evt.getNewValue() instanceof Date){
             Date dato = (Date)evt.getNewValue();
             System.out.println(dato.toString());
             SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
             String date = DATE_FORMAT.format(dato);
-            jLabel27.setText(date);
+            labelCreateCaseReqDate.setText(date);
         }
-    }//GEN-LAST:event_jCalendarButton3PropertyChange
+    }//GEN-LAST:event_calCreateCaseReqDatePropertyChange
 
-    private void jCalendarButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCalendarButton3ActionPerformed
+    private void calCreateCaseReqDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calCreateCaseReqDateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCalendarButton3ActionPerformed
+    }//GEN-LAST:event_calCreateCaseReqDateActionPerformed
 
-    private void jCalendarButton3StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jCalendarButton3StateChanged
+    private void calCreateCaseReqDateStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_calCreateCaseReqDateStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCalendarButton3StateChanged
+    }//GEN-LAST:event_calCreateCaseReqDateStateChanged
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
-        System.out.println(jComboBox3.getSelectedItem());        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+    private void ComboBoxCreateCaseReqTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBoxCreateCaseReqTimeActionPerformed
+        System.out.println(ComboBoxCreateCaseReqTime.getSelectedItem());        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboBoxCreateCaseReqTimeActionPerformed
 
-    private void jCalendarButton2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jCalendarButton2PropertyChange
+    private void calCreateCaseInspectDatePropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_calCreateCaseInspectDatePropertyChange
         if (evt.getNewValue() instanceof Date){
             Date dato = (Date)evt.getNewValue();
             System.out.println(dato.toString());
             SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
             String date = DATE_FORMAT.format(dato);
-            jLabel26.setText(date);
+            labelCreateCaseInspectDate.setText(date);
         }
-    }//GEN-LAST:event_jCalendarButton2PropertyChange
+    }//GEN-LAST:event_calCreateCaseInspectDatePropertyChange
 
-    private void jCalendarButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCalendarButton2ActionPerformed
+    private void calCreateCaseInspectDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calCreateCaseInspectDateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCalendarButton2ActionPerformed
+    }//GEN-LAST:event_calCreateCaseInspectDateActionPerformed
 
-    private void jCalendarButton2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jCalendarButton2StateChanged
+    private void calCreateCaseInspectDateStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_calCreateCaseInspectDateStateChanged
 
-    }//GEN-LAST:event_jCalendarButton2StateChanged
+    }//GEN-LAST:event_calCreateCaseInspectDateStateChanged
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void textFieldCreateCasePostnrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldCreateCasePostnrActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_textFieldCreateCasePostnrActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void textFieldCreateCaseAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldCreateCaseAddressActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_textFieldCreateCaseAddressActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void textFieldCreateCaseSubjectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldCreateCaseSubjectActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_textFieldCreateCaseSubjectActionPerformed
 
-    private void FerdigButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FerdigButtonActionPerformed
-        jLabel5.setForeground(Color.black);
-        jLabel6.setForeground(Color.black);
-        jLabel16.setForeground(Color.black);
-        jLabel13.setForeground(Color.black);
-        String contractor = jTextField1.getText();
+    private void buttonCreateCaseCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCreateCaseCompleteActionPerformed
+        labelCreateCaseDEmployer.setForeground(Color.black);
+        labelCreateCaseDPhone.setForeground(Color.black);
+        labelCreateCaseDStartDate.setForeground(Color.black);
+        labelCreateCaseDSubject.setForeground(Color.black);
+        String contractor = textFieldCreateCaseEmployer.getText();
         int postnummer = 0;
         int telephone = 0;
         try{
-            telephone = Integer.parseInt(jTextField2.getText().trim());
+            telephone = Integer.parseInt(textFieldCreateCasePhone.getText().trim());
         } catch(NumberFormatException e){
             System.out.println("Feil telefonnumer. Bare tall");
         }
-        String gateAdresse = jTextField6.getText().trim();
+        String gateAdresse = textFieldCreateCaseAddress.getText().trim();
         try{
-            postnummer = Integer.parseInt(jTextField7.getText().trim());
+            postnummer = Integer.parseInt(textFieldCreateCasePostnr.getText().trim());
         }
         catch(NumberFormatException e){
             System.out.println("Feil postnummer. Bare tall");
         }
-        String poststed = jTextField3.getText().trim();
-        String topic = jTextField5.getText().trim();
-        String description = jTextArea1.getText().trim();
+        String poststed = textFieldCreateCasePostPlace.getText().trim();
+        String topic = textFieldCreateCaseSubject.getText().trim();
+        String description = textAreaCreateCaseDescription.getText().trim();
 
-        String ansvarlige = (String)jComboBox1.getSelectedItem();
+        String ansvarlige = (String)comboBoxCreateCaseSupervisor.getSelectedItem();
 
-        String befaring = jLabel26.getText().trim();
+        String befaring = labelCreateCaseInspectDate.getText().trim();
 
         /* BRUKES IKKE LENGRE
         String[] arbeidstakere = new String[jList3.getModel().getSize()];
@@ -785,9 +787,9 @@ public class dagsverket extends javax.swing.JFrame {
         }
         */
         String[] arbeidstakere = null;
-        String status = (String)jComboBox2.getSelectedItem();
+        String status = (String)comboBoxCreateCaseStatus.getSelectedItem();
 
-        String date = jLabel21.getText().trim();
+        String date = labelCreateCaseDate.getText().trim();
         String time = "";
         String epostAdresse = "";
         ArrayList<Integer> create_errors = op.createEvent(contractor, arbeidstakere, telephone, epostAdresse, gateAdresse, postnummer, poststed, ansvarlige, befaring, date, time, topic, description, status);
@@ -803,66 +805,66 @@ public class dagsverket extends javax.swing.JFrame {
             System.out.println(create_errors);
             for(int i = 0; i<create_errors.size(); i++){
                 if(create_errors.get(i)==1){
-                    jLabel5.setForeground(Color.red);
+                    labelCreateCaseDEmployer.setForeground(Color.red);
                 }
                 if(create_errors.get(i)==2){
-                    jLabel6.setForeground(Color.red);
-                    jLabel16.setForeground(Color.red);
+                    labelCreateCaseDPhone.setForeground(Color.red);
+                    labelCreateCaseDStartDate.setForeground(Color.red);
                 }
                 if(create_errors.get(i)==3){
-                    jLabel13.setForeground(Color.red);
+                    labelCreateCaseDSubject.setForeground(Color.red);
                 }
             }
         }
-    }//GEN-LAST:event_FerdigButtonActionPerformed
+    }//GEN-LAST:event_buttonCreateCaseCompleteActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void textFieldCreateCasePostPlaceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldCreateCasePostPlaceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_textFieldCreateCasePostPlaceActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void textFieldCreateCasePhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldCreateCasePhoneActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_textFieldCreateCasePhoneActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void textFieldCreateCaseEmployerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldCreateCaseEmployerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_textFieldCreateCaseEmployerActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void comboBoxCreateCaseSupervisorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxCreateCaseSupervisorActionPerformed
 
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_comboBoxCreateCaseSupervisorActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void textFieldCreateCasePriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldCreateCasePriceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_textFieldCreateCasePriceActionPerformed
 
-    private void jCalendarButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCalendarButton1ActionPerformed
+    private void calCreateCaseStartDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calCreateCaseStartDateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCalendarButton1ActionPerformed
+    }//GEN-LAST:event_calCreateCaseStartDateActionPerformed
 
-    private void jCalendarButton1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jCalendarButton1PropertyChange
+    private void calCreateCaseStartDatePropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_calCreateCaseStartDatePropertyChange
         if (evt.getNewValue() instanceof Date){
             Date dato = (Date)evt.getNewValue();
             SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
             String date = DATE_FORMAT.format(dato);
-            jLabel17.setText(date);
+            labelCreateCaseStartDate.setText(date);
         }
-    }//GEN-LAST:event_jCalendarButton1PropertyChange
+    }//GEN-LAST:event_calCreateCaseStartDatePropertyChange
 
-    private void jTextField7PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTextField7PropertyChange
+    private void textFieldCreateCasePostnrPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_textFieldCreateCasePostnrPropertyChange
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7PropertyChange
+    }//GEN-LAST:event_textFieldCreateCasePostnrPropertyChange
 
-    private void jTextField7InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jTextField7InputMethodTextChanged
+    private void textFieldCreateCasePostnrInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_textFieldCreateCasePostnrInputMethodTextChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7InputMethodTextChanged
+    }//GEN-LAST:event_textFieldCreateCasePostnrInputMethodTextChanged
 
-    private void jTextField7FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField7FocusLost
+    private void textFieldCreateCasePostnrFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textFieldCreateCasePostnrFocusLost
         // TODO add your handling code here:
-        jTextField3.setText(jTextField7.getText());
+        textFieldCreateCasePostPlace.setText(textFieldCreateCasePostnr.getText());
         // set Field ut i fra postnr = poststed i database!!! 
-    }//GEN-LAST:event_jTextField7FocusLost
+    }//GEN-LAST:event_textFieldCreateCasePostnrFocusLost
 
     /**
      * @param args the command line arguments
@@ -910,44 +912,20 @@ public class dagsverket extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton FerdigButton;
+    private javax.swing.JComboBox ComboBoxCreateCaseReqTime;
+    private javax.swing.JButton buttonCreateCaseComplete;
+    private net.sourceforge.jcalendarbutton.JCalendarButton calCreateCaseInspectDate;
+    private net.sourceforge.jcalendarbutton.JCalendarButton calCreateCaseReqDate;
+    private net.sourceforge.jcalendarbutton.JCalendarButton calCreateCaseStartDate;
+    private javax.swing.JComboBox comboBoxCreateCaseStatus;
+    private javax.swing.JComboBox comboBoxCreateCaseSupervisor;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private net.sourceforge.jcalendarbutton.JCalendarButton jCalendarButton1;
-    private net.sourceforge.jcalendarbutton.JCalendarButton jCalendarButton2;
-    private net.sourceforge.jcalendarbutton.JCalendarButton jCalendarButton3;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JComboBox jComboBox3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -968,18 +946,42 @@ public class dagsverket extends javax.swing.JFrame {
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JLabel nEventHeaderLabel;
+    private javax.swing.JLabel labelCreateCaseDAddress;
+    private javax.swing.JLabel labelCreateCaseDContacts;
+    private javax.swing.JLabel labelCreateCaseDDate;
+    private javax.swing.JLabel labelCreateCaseDDescription;
+    private javax.swing.JLabel labelCreateCaseDEmployer;
+    private javax.swing.JPanel labelCreateCaseDEquipment;
+    private javax.swing.JLabel labelCreateCaseDInspectDate;
+    private javax.swing.JLabel labelCreateCaseDName;
+    private javax.swing.JLabel labelCreateCaseDNameHeader;
+    private javax.swing.JLabel labelCreateCaseDPhone;
+    private javax.swing.JLabel labelCreateCaseDPostnr;
+    private javax.swing.JLabel labelCreateCaseDPrice;
+    private javax.swing.JLabel labelCreateCaseDReqDate;
+    private javax.swing.JLabel labelCreateCaseDReqTime;
+    private javax.swing.JLabel labelCreateCaseDStartDate;
+    private javax.swing.JLabel labelCreateCaseDStatus;
+    private javax.swing.JLabel labelCreateCaseDSubject;
+    private javax.swing.JLabel labelCreateCaseDSupervisor;
+    private javax.swing.JLabel labelCreateCaseDSupervisorHeader;
+    private javax.swing.JLabel labelCreateCaseDate;
+    private javax.swing.JLabel labelCreateCaseHeader;
+    private javax.swing.JLabel labelCreateCaseInspectDate;
+    private javax.swing.JLabel labelCreateCaseName;
+    private javax.swing.JLabel labelCreateCaseReqDate;
+    private javax.swing.JLabel labelCreateCaseStartDate;
+    private javax.swing.JTextArea textAreaCreateCaseContacts;
+    private javax.swing.JTextArea textAreaCreateCaseDescription;
+    private javax.swing.JTextArea textAreaCreateCaseEquipment;
+    private javax.swing.JTextField textFieldCreateCaseAddress;
+    private javax.swing.JTextField textFieldCreateCaseEmployer;
+    private javax.swing.JTextField textFieldCreateCasePhone;
+    private javax.swing.JTextField textFieldCreateCasePostPlace;
+    private javax.swing.JTextField textFieldCreateCasePostnr;
+    private javax.swing.JTextField textFieldCreateCasePrice;
+    private javax.swing.JTextField textFieldCreateCaseSubject;
     // End of variables declaration//GEN-END:variables
 }
