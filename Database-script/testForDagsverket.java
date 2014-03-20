@@ -7,9 +7,9 @@ class Users {
 	// liste med brukere
 }
 
-class User {
-	// register bruker, osv..
-}
+// class User {
+// 	// register bruker, osv..
+// }
 
 class Cases {
 	public static int NO_CONTRACTOR = 1;
